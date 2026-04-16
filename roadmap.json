@@ -665,7 +665,7 @@
             {
               "id": "c11-3",
               "title": "DNA reward multiplier scales with heat tier",
-              "status": "blocked",
+              "status": "todo",
               "priority": "medium",
               "assignee": null,
               "blockedBy": [
@@ -677,7 +677,7 @@
             {
               "id": "c11-4",
               "title": "Heat selector UI on level map card",
-              "status": "done",
+              "status": "blocked",
               "priority": "high",
               "assignee": null,
               "blockedBy": [
