@@ -239,7 +239,7 @@
         {
           "id": "ph-4",
           "title": "Phase 9: Game loop",
-          "collapsed": true,
+          "collapsed": false,
           "tasks": [
             {
               "id": "c4-1",
