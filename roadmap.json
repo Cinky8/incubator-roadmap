@@ -1134,7 +1134,7 @@
       "id": "cat-art",
       "name": "Art",
       "icon": "◈",
-      "mode": "kanban",
+      "mode": "list",
       "phases": []
     },
     {
