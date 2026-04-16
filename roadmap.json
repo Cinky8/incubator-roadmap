@@ -239,7 +239,7 @@
         {
           "id": "ph-4",
           "title": "Phase 9: Game loop",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c4-1",
@@ -638,7 +638,7 @@
         {
           "id": "ph-11",
           "title": "Phase 16: Heat / difficulty system",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c11-1",
@@ -703,7 +703,7 @@
         {
           "id": "ph-12",
           "title": "Phase 17: Boss system",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c12-1",
@@ -756,7 +756,7 @@
         {
           "id": "ph-13",
           "title": "Phase 18: Power progression (Lab Upgrades)",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c13-1",
@@ -882,7 +882,7 @@
         {
           "id": "ph-15",
           "title": "Phase 20: Polish",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c15-1",
