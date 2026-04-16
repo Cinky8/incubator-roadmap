@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project Incubator — Roadmap</title>
 <style>
-:root{--bg:#0f1117;--bg2:#161b27;--bg3:#1e2436;--bg4:#252d42;--border:#2a3350;--border2:#334070;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--accent:#6366f1;--accent2:#818cf8;--green:#22c55e;--yellow:#eab308;--red:#ef4444;--orange:#f97316;--blue:#3b82f6;--purple:#a855f7;--radius:8px;--radius-sm:5px}
+:root{--bg:#0f1117;--bg2:#161b27;--bg3:#1e2436;--bg4:#252d42;--border:#2a3350;--border2:#334070;--text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;--accent:#6366f1;--accent2:#818cf8;--green:#22c55e;--yellow:#eab308;--red:#ef4444;--blue:#3b82f6;--purple:#a855f7;--radius:8px;--radius-sm:5px}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px}
 
-.header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;gap:16px;height:52px;position:sticky;top:0;z-index:100}
-.header-title{font-size:15px;font-weight:600;color:var(--text);white-space:nowrap}
+/* Header */
+.header{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;gap:16px;height:52px;position:sticky;top:0;z-index:200}
+.header-title{font-size:15px;font-weight:600;white-space:nowrap}
 .header-sep{width:1px;height:20px;background:var(--border)}
 .header-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
 .btn{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:var(--radius-sm);font-size:13px;font-weight:500;cursor:pointer;border:1px solid var(--border2);background:transparent;color:var(--text2);transition:all .15s}
@@ -21,22 +22,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .btn-danger{border-color:var(--red);color:var(--red)}
 .btn-danger:hover{background:rgba(239,68,68,.1)}
 .sync-status{font-size:12px;color:var(--text3);display:flex;align-items:center;gap:5px}
-.sync-dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+.sync-dot{width:7px;height:7px;border-radius:50%;background:var(--text3)}
+.sync-dot.ok{background:var(--green)}
 .sync-dot.syncing{background:var(--yellow);animation:pulse 1s infinite}
 .sync-dot.error{background:var(--red)}
-.sync-dot.none{background:var(--text3)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
-/* Main tabs */
-.tabbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;gap:2px;position:sticky;top:52px;z-index:99}
+/* Tabs */
+.tabbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;gap:2px;position:sticky;top:52px;z-index:150}
 .tab{padding:12px 16px;font-size:13px;font-weight:500;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;display:flex;align-items:center;gap:6px}
 .tab:hover{color:var(--text)}
 .tab.active{color:var(--accent2);border-bottom-color:var(--accent)}
 .tab-add{padding:12px;color:var(--text3);cursor:pointer;font-size:16px;line-height:1}
 .tab-add:hover{color:var(--text)}
 
-/* Sub-tabs (Tasks | Backlog per category) */
-.subtabbar{background:var(--bg);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;gap:2px;position:sticky;top:100px;z-index:98}
+/* Subtabs */
+.subtabbar{background:var(--bg);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;gap:2px;position:sticky;top:100px;z-index:149}
 .subtab{padding:8px 14px;font-size:12px;font-weight:500;color:var(--text3);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:6px}
 .subtab:hover{color:var(--text2)}
 .subtab.active{color:var(--accent2);border-bottom-color:var(--accent)}
@@ -44,8 +45,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .subtab.active .subtab-count{background:rgba(99,102,241,.2);color:var(--accent2)}
 
 /* Toolbar */
-.toolbar{padding:10px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);background:var(--bg);flex-wrap:wrap;position:sticky;top:136px;z-index:97}
-.search-wrap{position:relative;flex:1;min-width:180px;max-width:320px}
+.toolbar{padding:10px 20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);background:var(--bg);flex-wrap:wrap;position:sticky;top:136px;z-index:148}
+.search-wrap{position:relative;flex:1;min-width:180px;max-width:280px}
 .search-wrap input{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 10px 6px 32px;color:var(--text);font-size:13px;outline:none}
 .search-wrap input:focus{border-color:var(--accent)}
 .search-wrap input::placeholder{color:var(--text3)}
@@ -56,17 +57,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .mode-toggle{display:flex;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
 .mode-btn{padding:5px 10px;font-size:12px;cursor:pointer;color:var(--text3);border:none;background:transparent;transition:all .15s}
 .mode-btn.active{background:var(--accent);color:#fff}
+.select-mode-btn{padding:5px 10px;font-size:12px;cursor:pointer;border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--text3);background:transparent;transition:all .15s}
+.select-mode-btn.active{background:rgba(99,102,241,.15);border-color:var(--accent);color:var(--accent2)}
 
-.content{padding:20px;max-width:1100px;margin:0 auto}
+/* Content */
+.content{padding:20px;margin:0 auto;max-width:1100px}
+.content.kanban-mode{max-width:none;padding:20px}
 
 /* Phase */
 .phase{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
 .phase-header{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;user-select:none}
 .phase-header:hover{background:var(--bg3)}
-.phase-chevron{font-size:11px;color:var(--text3);transition:transform .15s;width:14px}
+.phase-chevron{font-size:11px;color:var(--text3);transition:transform .15s;width:14px;flex-shrink:0}
 .phase-chevron.open{transform:rotate(90deg)}
 .phase-title-wrap{flex:1;display:flex;align-items:center;gap:10px}
-.phase-title{font-size:13px;font-weight:600;color:var(--text)}
+.phase-title{font-size:13px;font-weight:600}
 .phase-count{font-size:11px;color:var(--text3);background:var(--bg4);padding:2px 7px;border-radius:10px}
 .phase-progress{display:flex;align-items:center;gap:8px}
 .phase-bar{width:80px;height:4px;background:var(--bg4);border-radius:2px;overflow:hidden}
@@ -77,49 +82,57 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .phase-body{border-top:1px solid var(--border)}
 
 /* Task */
-.task{display:flex;align-items:flex-start;gap:10px;padding:9px 16px;border-bottom:1px solid var(--border);transition:background .1s;position:relative}
+.task{display:flex;align-items:flex-start;gap:10px;padding:9px 16px;border-bottom:1px solid var(--border);position:relative;cursor:pointer;transition:background .1s}
 .task:last-child{border-bottom:none}
 .task:hover{background:var(--bg3)}
+.task.highlighted{background:rgba(99,102,241,.08);outline:2px solid var(--accent);outline-offset:-2px}
+.task.blocker-highlighted{background:rgba(239,68,68,.08);outline:2px solid var(--red);outline-offset:-2px}
+.task.selected-task{background:rgba(99,102,241,.06)}
+.task-checkbox{width:16px;height:16px;border:1.5px solid var(--border2);border-radius:3px;flex-shrink:0;margin-top:2px;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:10px;transition:all .15s}
+.task-checkbox.checked{background:var(--accent);border-color:var(--accent)}
+.select-mode .task-checkbox{display:flex}
 .task-status-btn{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--border2);cursor:pointer;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:10px;transition:all .15s}
 .task-status-btn.done{background:var(--green);border-color:var(--green)}
 .task-status-btn.in-progress{background:var(--blue);border-color:var(--blue)}
 .task-status-btn.review{background:var(--purple);border-color:var(--purple)}
-.task-status-btn.blocked{background:var(--red);border-color:var(--red)}
+.task-status-btn.blocked-status{background:var(--red);border-color:var(--red)}
 .task-main{flex:1;min-width:0}
-.task-title{font-size:13px;color:var(--text);line-height:1.4}
+.task-title{font-size:13px;line-height:1.4}
 .task-title.done{text-decoration:line-through;color:var(--text3)}
 .task-badges{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:4px}
 .badge{font-size:11px;padding:2px 6px;border-radius:4px;font-weight:500}
 .badge-high{background:rgba(239,68,68,.15);color:#f87171}
 .badge-low{background:rgba(100,116,139,.15);color:var(--text3)}
-.badge-blocked-on{background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.3)}
 .badge-backlog{background:rgba(168,85,247,.15);color:#c084fc}
+.badge-is-blocked{background:rgba(239,68,68,.12);color:#f87171;border:1px solid rgba(239,68,68,.3);cursor:pointer}
+.badge-is-blocked:hover{background:rgba(239,68,68,.22)}
 .task-note{font-size:11px;color:var(--text3);margin-top:3px}
 .task-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
-.assignee-dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#fff;cursor:pointer;flex-shrink:0}
-.blocked-badge{background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:2px 6px;border-radius:10px;cursor:pointer}
-.blocked-badge:hover{opacity:.8}
-.task-actions{display:flex;gap:2px;opacity:0;transition:opacity .15s}
-.task:hover .task-actions{opacity:1}
-.icon-btn{width:26px;height:26px;border-radius:4px;border:none;background:transparent;color:var(--text3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .15s}
-.icon-btn:hover{background:var(--bg4);color:var(--text)}
-.task.highlighted{background:rgba(239,68,68,.08);border-left:3px solid var(--red)}
+.assignee-dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#fff;flex-shrink:0}
+.blockers-count{background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;cursor:pointer}
+.blockers-count:hover{opacity:.8}
 
-/* Backlog view */
-.backlog-section{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
-.backlog-header{padding:12px 16px;font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
-.backlog-count{font-size:11px;background:rgba(168,85,247,.15);color:#c084fc;padding:2px 7px;border-radius:10px}
+/* Batch bar */
+.batch-bar{position:fixed;bottom:0;left:0;right:0;background:var(--bg2);border-top:1px solid var(--border2);padding:12px 24px;display:none;align-items:center;gap:12px;z-index:500;box-shadow:0 -4px 20px rgba(0,0,0,.3)}
+.batch-bar.visible{display:flex}
+.batch-count{font-size:13px;font-weight:600;color:var(--accent2);min-width:80px}
+.batch-actions{display:flex;align-items:center;gap:10px;flex:1}
+.batch-label{font-size:12px;color:var(--text3)}
+
+/* Tooltip */
+.tooltip-box{position:fixed;background:#1a1f2e;border:1px solid var(--border2);border-radius:6px;padding:8px 10px;font-size:12px;color:var(--text);pointer-events:none;z-index:9999;max-width:280px;line-height:1.5;box-shadow:0 4px 16px rgba(0,0,0,.4);display:none}
+.tooltip-box.visible{display:block}
 
 /* Kanban */
-.kanban{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
-.kanban-col{flex:0 0 280px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius)}
+.kanban-wrap{display:flex;gap:14px;overflow-x:auto;padding-bottom:12px;width:100%}
+.kanban-col{flex:1;min-width:200px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius)}
 .kanban-col-header{padding:12px 14px;font-size:12px;font-weight:600;color:var(--text2);display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.06em}
 .kanban-dot{width:8px;height:8px;border-radius:50%}
 .kanban-count{margin-left:auto;background:var(--bg4);color:var(--text3);font-size:11px;padding:2px 7px;border-radius:10px}
-.kanban-body{padding:10px;display:flex;flex-direction:column;gap:8px;min-height:60px}
+.kanban-body{padding:10px;display:flex;flex-direction:column;gap:8px;min-height:80px}
 .kanban-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;cursor:pointer;transition:border-color .15s}
 .kanban-card:hover{border-color:var(--border2)}
-.kanban-card-title{font-size:12.5px;color:var(--text);line-height:1.4;margin-bottom:7px}
+.kanban-card-title{font-size:12.5px;line-height:1.4;margin-bottom:7px}
 .kanban-card-footer{display:flex;align-items:center;gap:6px}
 .col-todo .kanban-dot{background:var(--text3)}
 .col-in-progress .kanban-dot{background:var(--blue)}
@@ -127,28 +140,39 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .col-done .kanban-dot{background:var(--green)}
 .col-blocked .kanban-dot{background:var(--red)}
 
+/* Backlog */
+.backlog-section{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
+.backlog-header{padding:12px 16px;font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.backlog-count{font-size:11px;background:rgba(168,85,247,.15);color:#c084fc;padding:2px 7px;border-radius:10px}
+
 /* Team */
-.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:24px}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-bottom:24px;margin-top:8px}
 .member-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;align-items:center;gap:14px}
-.member-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0}
+.member-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0;position:relative}
+.me-badge{position:absolute;bottom:-2px;right:-2px;background:var(--accent);border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;font-size:8px;border:2px solid var(--bg2)}
 .member-info{flex:1}
 .member-name{font-size:14px;font-weight:600}
 .member-role{font-size:12px;color:var(--text3);margin-top:2px}
-.member-tasks{font-size:12px;color:var(--text2);margin-top:6px}
-.member-actions{display:flex;gap:4px}
+.member-tasks-count{font-size:12px;color:var(--text2);margin-top:6px}
+.member-actions{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+
+/* My Tasks / Team task list */
+.person-section{margin-bottom:20px}
+.person-section-header{font-size:13px;font-weight:600;color:var(--text2);margin-bottom:8px;display:flex;align-items:center;gap:10px;padding-top:4px}
+.my-tasks-empty{text-align:center;padding:40px 20px;color:var(--text3);font-size:13px}
 
 /* Modal */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px}
-.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius);width:100%;max-width:520px;max-height:85vh;overflow-y:auto}
-.modal-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.modal{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius);width:100%;max-width:540px;max-height:88vh;overflow-y:auto}
+.modal-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--bg2);z-index:1}
 .modal-title{font-size:15px;font-weight:600}
 .modal-body{padding:20px;display:flex;flex-direction:column;gap:14px}
-.modal-footer{padding:14px 20px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:8px}
+.modal-footer{padding:14px 20px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:8px;position:sticky;bottom:0;background:var(--bg2)}
 .form-group{display:flex;flex-direction:column;gap:5px}
 .form-label{font-size:12px;font-weight:500;color:var(--text2)}
 .form-input,.form-select,.form-textarea{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius-sm);padding:8px 10px;color:var(--text);font-size:13px;outline:none;width:100%;font-family:inherit}
 .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent)}
-.form-textarea{resize:vertical;min-height:70px}
+.form-textarea{resize:vertical;min-height:60px}
 .radio-group{display:flex;gap:8px;flex-wrap:wrap}
 .radio-option{display:flex;align-items:center;gap:5px;cursor:pointer;padding:5px 10px;border-radius:var(--radius-sm);border:1px solid var(--border);transition:all .15s;font-size:12px}
 .radio-option:hover{border-color:var(--accent)}
@@ -156,14 +180,31 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .color-grid{display:flex;gap:8px;flex-wrap:wrap}
 .color-swatch{width:28px;height:28px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:transform .15s}
 .color-swatch.selected{border-color:#fff;transform:scale(1.15)}
-.dep-list{display:flex;flex-direction:column;gap:4px;max-height:160px;overflow-y:auto}
-.dep-item{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:4px;cursor:pointer;font-size:12px;transition:background .1s}
+
+/* Blocked-by section in modal */
+.dep-section{display:flex;flex-direction:column;gap:4px}
+.dep-header{font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;padding:4px 0 2px}
+.dep-item{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:var(--radius-sm);cursor:pointer;font-size:12px;transition:background .1s;border:1px solid transparent}
 .dep-item:hover{background:var(--bg4)}
+.dep-item.is-blocker{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.25);color:#f87171}
+.dep-item.is-blocker:hover{background:rgba(239,68,68,.14)}
 .dep-check{width:14px;height:14px;border:1.5px solid var(--border2);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px}
 .dep-check.checked{background:var(--accent);border-color:var(--accent)}
+.dep-item.is-blocker .dep-check{background:var(--red);border-color:var(--red)}
+.dep-status{font-size:10px;padding:1px 5px;border-radius:3px;margin-left:auto;white-space:nowrap;flex-shrink:0}
+.dep-status.todo{background:rgba(100,116,139,.2);color:var(--text3)}
+.dep-status.in-progress{background:rgba(59,130,246,.2);color:#93c5fd}
+.dep-status.review{background:rgba(168,85,247,.2);color:#c084fc}
+.dep-status.blocked-st{background:rgba(239,68,68,.2);color:#f87171}
+.dep-goto{font-size:10px;padding:2px 6px;border-radius:3px;background:rgba(99,102,241,.15);color:var(--accent2);cursor:pointer;white-space:nowrap;flex-shrink:0;border:none;transition:background .15s}
+.dep-goto:hover{background:rgba(99,102,241,.3)}
+
 .empty{text-align:center;padding:40px 20px;color:var(--text3)}
 .empty-icon{font-size:32px;margin-bottom:10px;opacity:.4}
 .empty-text{font-size:13px}
+.icon-btn{width:26px;height:26px;border-radius:4px;border:none;background:transparent;color:var(--text3);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .15s}
+.icon-btn:hover{background:var(--bg4);color:var(--text)}
+
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
@@ -174,10 +215,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <div class="header">
   <div class="header-title" id="projectTitle">Project Incubator</div>
   <div class="header-sep"></div>
-  <div class="sync-status">
-    <div class="sync-dot none" id="syncDot"></div>
-    <span id="syncLabel">Not configured</span>
-  </div>
+  <div class="sync-status"><div class="sync-dot" id="syncDot"></div><span id="syncLabel">Not configured</span></div>
   <div class="header-actions">
     <button class="btn btn-sm" onclick="exportJSON()">↓ Export</button>
     <button class="btn btn-sm" onclick="openSettings()">⚙ Settings</button>
@@ -206,6 +244,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="toolbar-right">
     <button class="btn btn-sm" onclick="collapseAll()">Collapse all</button>
     <button class="btn btn-sm" onclick="expandAll()">Expand all</button>
+    <button class="select-mode-btn" id="selectModeBtn" onclick="toggleSelectMode()">☐ Select</button>
     <div class="mode-toggle" id="modeToggle" style="display:none">
       <button class="mode-btn" id="modeList" onclick="setMode('list')">☰ List</button>
       <button class="mode-btn" id="modeKanban" onclick="setMode('kanban')">⊞ Board</button>
@@ -214,94 +253,152 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </div>
 
 <div class="content" id="content"></div>
+
+<!-- Batch bar -->
+<div class="batch-bar" id="batchBar">
+  <span class="batch-count" id="batchCount">0 selected</span>
+  <div class="batch-actions">
+    <span class="batch-label">Assign:</span>
+    <select class="filter-select" id="batchAssignee" style="font-size:12px;padding:4px 8px">
+      <option value="">— Person —</option>
+    </select>
+    <span class="batch-label">Priority:</span>
+    <select class="filter-select" id="batchPriority" style="font-size:12px;padding:4px 8px">
+      <option value="">— Priority —</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
+    </select>
+    <span class="batch-label">Status:</span>
+    <select class="filter-select" id="batchStatus" style="font-size:12px;padding:4px 8px">
+      <option value="">— Status —</option>
+      <option value="todo">To do</option>
+      <option value="in-progress">In progress</option>
+      <option value="review">Review</option>
+      <option value="blocked">Blocked</option>
+      <option value="done">Done</option>
+    </select>
+    <button class="btn btn-primary btn-sm" onclick="applyBatch()">Apply</button>
+    <button class="btn btn-sm" onclick="clearSelection()">Clear</button>
+  </div>
+</div>
+
+<!-- Tooltip -->
+<div class="tooltip-box" id="tooltipBox"></div>
+
+<!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" style="display:none" onclick="closeModalOverlay(event)">
   <div class="modal" id="modal"></div>
 </div>
 
 <script>
-let data = null;
-let activeTab = null;
-let activeSubTab = {};  // catId -> 'tasks' | 'backlog'
-let highlightedTasks = new Set();
-let githubConfig = JSON.parse(localStorage.getItem('gh_config') || 'null');
-let syncTimeout = null;
-
-const STATUS_LABELS = { todo:'To do','in-progress':'In progress',review:'Review',blocked:'Blocked',done:'Done' };
+const STATUS_LABELS = {todo:'To do','in-progress':'In progress',review:'Review',blocked:'Blocked',done:'Done'};
 const MEMBER_COLORS = ['#6366f1','#22c55e','#3b82f6','#f97316','#a855f7','#ec4899','#06b6d4','#eab308','#ef4444','#84cc16'];
 
+let data = null;
+let activeTab = null;
+let activeSubTab = {};
+let highlightedTasks = new Set();
+let highlightMode = 'blocked'; // 'blocked' | 'blocker'
+let githubConfig = JSON.parse(localStorage.getItem('gh_config') || 'null');
+let syncTimeout = null;
+let selectMode = false;
+let selectedTasks = new Set();
+let myUserId = localStorage.getItem('my_user_id') || null;
+
+// ── Init ──────────────────────────────────────────────────────────────────────
 async function init() {
   const saved = localStorage.getItem('roadmap_data');
   if (saved) { try { data = JSON.parse(saved); } catch(e) {} }
   if (!data) {
     try { const r = await fetch('roadmap.json'); data = await r.json(); }
-    catch(e) { data = { meta:{ projectName:'My Project' }, team:[], categories:[] }; }
+    catch(e) { data = { meta:{projectName:'My Project'}, team:[], categories:[] }; }
   }
   activeTab = data.categories[0]?.id || 'team';
   updateSyncUI();
   render();
 }
 
+// ── Save / Sync ───────────────────────────────────────────────────────────────
 function save() {
   localStorage.setItem('roadmap_data', JSON.stringify(data));
   scheduleSyncToGitHub();
 }
-
 function scheduleSyncToGitHub() {
   if (!githubConfig) return;
   clearTimeout(syncTimeout);
   setSyncState('syncing');
   syncTimeout = setTimeout(syncToGitHub, 1500);
 }
-
 async function syncToGitHub() {
   if (!githubConfig) return;
-  setSyncState('syncing');
   try {
-    const { token, owner, repo, path } = githubConfig;
+    const {token,owner,repo,path} = githubConfig;
     const api = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
     let sha = null;
     try { const r = await fetch(api,{headers:{Authorization:`token ${token}`,'User-Agent':'roadmap'}}); if(r.ok){const j=await r.json();sha=j.sha;} } catch(e){}
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
-    const body = { message:`roadmap: update ${new Date().toISOString().slice(0,16)}`, content, ...(sha?{sha}:{}) };
-    const res = await fetch(api,{method:'PUT',headers:{Authorization:`token ${token}`,'Content-Type':'application/json','User-Agent':'roadmap'},body:JSON.stringify(body)});
-    if (!res.ok) throw new Error(await res.text());
+    const res = await fetch(api,{method:'PUT',headers:{Authorization:`token ${token}`,'Content-Type':'application/json','User-Agent':'roadmap'},body:JSON.stringify({message:`roadmap: update ${new Date().toISOString().slice(0,16)}`,content,...(sha?{sha}:{})})});
+    if (!res.ok) throw new Error();
     setSyncState('ok');
   } catch(e) { setSyncState('error'); }
 }
-
-function setSyncState(state) {
-  const dot = document.getElementById('syncDot');
-  const lbl = document.getElementById('syncLabel');
-  dot.className = 'sync-dot' + (state==='syncing'?' syncing':state==='error'?' error':state==='none'?' none':'');
-  lbl.textContent = state==='syncing'?'Saving…':state==='error'?'Sync failed':state==='ok'?'Saved to GitHub':'Not configured';
+function setSyncState(s) {
+  document.getElementById('syncDot').className = 'sync-dot' + (s==='ok'?' ok':s==='syncing'?' syncing':s==='error'?' error':'');
+  document.getElementById('syncLabel').textContent = s==='ok'?'Saved to GitHub':s==='syncing'?'Saving…':s==='error'?'Sync failed':'Not configured';
 }
-function updateSyncUI() { setSyncState(githubConfig ? 'ok' : 'none'); }
+function updateSyncUI() { setSyncState(githubConfig?'ok':'none'); }
 function exportJSON() {
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
-  a.download = 'roadmap.json'; a.click();
+  a.download='roadmap.json'; a.click();
 }
+
+// ── Tooltip ───────────────────────────────────────────────────────────────────
+const tooltip = document.getElementById('tooltipBox');
+function showTooltip(e, lines) {
+  tooltip.innerHTML = Array.isArray(lines) ? lines.join('<br>') : lines;
+  tooltip.classList.add('visible');
+  positionTooltip(e);
+}
+function positionTooltip(e) {
+  const x = e.clientX + 14, y = e.clientY - 10;
+  tooltip.style.left = Math.min(x, window.innerWidth - 300) + 'px';
+  tooltip.style.top = Math.max(y, 10) + 'px';
+}
+function hideTooltip() { tooltip.classList.remove('visible'); }
+document.addEventListener('mousemove', e => { if (tooltip.classList.contains('visible')) positionTooltip(e); });
 
 // ── Render ────────────────────────────────────────────────────────────────────
 function render() {
   renderTabbar();
   renderPersonFilter();
+  updateBatchDropdowns();
+
+  if (activeTab === 'team') { hideSubtab(); renderTeam(); return; }
+  if (activeTab === 'mytasks') { hideSubtab(); renderMyTasks(); return; }
+
   const cat = data.categories.find(c => c.id === activeTab);
-  if (activeTab === 'team') { renderTeam(); hideSubtab(); return; }
   if (!cat) return;
   renderSubtabbar(cat);
+
   const sub = activeSubTab[cat.id] || 'tasks';
+  const isKanban = cat.mode === 'kanban' && sub === 'tasks';
+
   const mt = document.getElementById('modeToggle');
   mt.style.display = sub === 'tasks' ? 'flex' : 'none';
   if (sub === 'tasks') {
-    mt.style.display = 'flex';
     document.getElementById('modeList').classList.toggle('active', cat.mode==='list');
     document.getElementById('modeKanban').classList.toggle('active', cat.mode==='kanban');
-    if (cat.mode === 'kanban') renderKanban(cat, false);
-    else renderList(cat, false);
-  } else {
-    renderBacklog(cat);
   }
+
+  const content = document.getElementById('content');
+  content.className = 'content' + (isKanban ? ' kanban-mode' : '');
+  if (selectMode) content.classList.add('select-mode');
+
+  if (sub === 'backlog') renderBacklog(cat);
+  else if (isKanban) renderKanban(cat);
+  else renderList(cat);
 }
 
 function hideSubtab() {
@@ -312,6 +409,7 @@ function hideSubtab() {
 function renderTabbar() {
   document.getElementById('tabbar').innerHTML =
     data.categories.map(c => `<div class="tab ${activeTab===c.id?'active':''}" onclick="switchTab('${c.id}')">${c.icon||'◇'} ${c.name}</div>`).join('') +
+    `<div class="tab ${activeTab==='mytasks'?'active':''}" onclick="switchTab('mytasks')">★ My Tasks</div>` +
     `<div class="tab ${activeTab==='team'?'active':''}" onclick="switchTab('team')">👥 Team</div>` +
     `<div class="tab-add" onclick="addCategory()" title="Add category">+</div>`;
 }
@@ -320,13 +418,9 @@ function renderSubtabbar(cat) {
   const sub = activeSubTab[cat.id] || 'tasks';
   const backlogCount = (cat.phases||[]).flatMap(p=>p.tasks||[]).filter(t=>t.backlog).length;
   const taskCount = (cat.phases||[]).flatMap(p=>p.tasks||[]).filter(t=>!t.backlog).length;
-  document.getElementById('subtabbar').innerHTML = `
-    <div class="subtab ${sub==='tasks'?'active':''}" onclick="switchSubTab('${cat.id}','tasks')">
-      Tasks <span class="subtab-count">${taskCount}</span>
-    </div>
-    <div class="subtab ${sub==='backlog'?'active':''}" onclick="switchSubTab('${cat.id}','backlog')">
-      Backlog <span class="subtab-count">${backlogCount}</span>
-    </div>`;
+  document.getElementById('subtabbar').innerHTML =
+    `<div class="subtab ${sub==='tasks'?'active':''}" onclick="switchSubTab('${cat.id}','tasks')">Tasks <span class="subtab-count">${taskCount}</span></div>` +
+    `<div class="subtab ${sub==='backlog'?'active':''}" onclick="switchSubTab('${cat.id}','backlog')">Backlog <span class="subtab-count">${backlogCount}</span></div>`;
 }
 
 function renderPersonFilter() {
@@ -336,6 +430,11 @@ function renderPersonFilter() {
   sel.value = prev;
 }
 
+function updateBatchDropdowns() {
+  document.getElementById('batchAssignee').innerHTML =
+    '<option value="">— Person —</option>' + data.team.map(m=>`<option value="${m.id}">${m.name}</option>`).join('') + '<option value="__none__">Unassign</option>';
+}
+
 function getFilters() {
   return {
     search: document.getElementById('searchInput').value.toLowerCase(),
@@ -343,43 +442,46 @@ function getFilters() {
     person: document.getElementById('filterPerson').value
   };
 }
-function taskMatches(task, f) {
-  if (f.search && !task.title.toLowerCase().includes(f.search)) return false;
-  if (f.status && task.status !== f.status) return false;
-  if (f.person && task.assignee !== f.person) return false;
+function taskMatches(t, f) {
+  if (f.search && !t.title.toLowerCase().includes(f.search)) return false;
+  if (f.status && t.status !== f.status) return false;
+  if (f.person && t.assignee !== f.person) return false;
   return true;
 }
 
-function blockedByCount(id) {
-  let n = 0;
-  for (const c of data.categories) for (const p of c.phases||[]) for (const t of p.tasks||[]) if (t.blockedBy?.includes(id)) n++;
-  return n;
+// ── Blocker helpers ───────────────────────────────────────────────────────────
+function blockerCount(taskId) { // tasks blocked BY this task
+  let n=0; for(const c of data.categories)for(const p of c.phases||[])for(const t of p.tasks||[])if(t.blockedBy?.includes(taskId))n++; return n;
 }
-function getBlockedTaskIds(id) {
-  const ids = [];
-  for (const c of data.categories) for (const p of c.phases||[]) for (const t of p.tasks||[]) if (t.blockedBy?.includes(id)) ids.push(t.id);
-  return ids;
+function getBlockedByThisTask(taskId) { // ids of tasks blocked by taskId
+  const ids=[]; for(const c of data.categories)for(const p of c.phases||[])for(const t of p.tasks||[])if(t.blockedBy?.includes(taskId))ids.push(t.id); return ids;
+}
+function getBlockerTasks(task) { // tasks that block this task
+  return (task.blockedBy||[]).map(id=>findTask(id)).filter(Boolean);
 }
 
-function renderList(cat, backlogOnly) {
+// ── List render ───────────────────────────────────────────────────────────────
+function renderList(cat) {
   const filters = getFilters();
   const el = document.getElementById('content');
-  const phases = (cat.phases||[]);
+  const phases = cat.phases||[];
   if (!phases.length) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">◇</div><div class="empty-text">No phases yet</div></div>
-      <div style="text-align:center;margin-top:12px"><button class="btn btn-primary" onclick="addPhase('${cat.id}')">+ Add phase</button></div>`;
+    el.innerHTML = `<div class="empty"><div class="empty-icon">◇</div><div class="empty-text">No phases yet</div></div><div style="text-align:center;margin-top:12px"><button class="btn btn-primary" onclick="addPhase('${cat.id}')">+ Add phase</button></div>`;
     return;
   }
-  el.innerHTML = phases.map(ph => {
-    const tasks = (ph.tasks||[]).filter(t => !t.backlog && taskMatches(t,filters));
-    const total = (ph.tasks||[]).filter(t=>!t.backlog).length;
-    const done = (ph.tasks||[]).filter(t=>!t.backlog && t.status==='done').length;
-    const pct = total ? Math.round(done/total*100) : 0;
+
+  let html = '';
+  for (const ph of phases) {
+    const tasks = (ph.tasks||[]).filter(t => !t.backlog && taskMatches(t, filters));
+    if (tasks.length === 0 && (filters.search || filters.status || filters.person)) continue; // hide empty phases when filtering
+    const allNonBacklog = (ph.tasks||[]).filter(t=>!t.backlog);
+    const done = allNonBacklog.filter(t=>t.status==='done').length;
+    const pct = allNonBacklog.length ? Math.round(done/allNonBacklog.length*100) : 0;
     const open = !ph.collapsed;
-    return `<div class="phase" id="phase-${ph.id}">
+    html += `<div class="phase" id="phase-${ph.id}">
       <div class="phase-header" onclick="togglePhase('${cat.id}','${ph.id}')">
         <span class="phase-chevron ${open?'open':''}">▶</span>
-        <div class="phase-title-wrap"><span class="phase-title">${ph.title}</span><span class="phase-count">${total}</span></div>
+        <div class="phase-title-wrap"><span class="phase-title">${ph.title}</span><span class="phase-count">${allNonBacklog.length}</span></div>
         <div class="phase-progress"><div class="phase-bar"><div class="phase-bar-fill" style="width:${pct}%"></div></div><span class="phase-pct">${pct}%</span></div>
         <div class="phase-actions" onclick="event.stopPropagation()">
           <button class="icon-btn" onclick="addTask('${cat.id}','${ph.id}')">+</button>
@@ -389,30 +491,37 @@ function renderList(cat, backlogOnly) {
       </div>
       ${open ? `<div class="phase-body">${tasks.length===0?'<div style="padding:14px 16px;color:var(--text3);font-size:13px">No tasks</div>':tasks.map(t=>renderTask(t)).join('')}</div>` : ''}
     </div>`;
-  }).join('') + `<div style="margin-top:12px"><button class="btn" onclick="addPhase('${cat.id}')">+ Add phase</button></div>`;
+  }
+  html += `<div style="margin-top:12px"><button class="btn" onclick="addPhase('${cat.id}')">+ Add phase</button></div>`;
+  el.innerHTML = html;
 }
 
 function renderBacklog(cat) {
   const filters = getFilters();
   const el = document.getElementById('content');
+  el.className = 'content' + (selectMode ? ' select-mode' : '');
   const tasks = (cat.phases||[]).flatMap(p=>p.tasks||[]).filter(t=>t.backlog && taskMatches(t,filters));
   if (!tasks.length) {
-    el.innerHTML = `<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">No backlog items. Mark a task as backlog to move it here.</div></div>`;
+    el.innerHTML = `<div class="empty"><div class="empty-icon">📦</div><div class="empty-text">No backlog items. Tick "Move to Backlog" in any task to move it here.</div></div>`;
     return;
   }
-  el.innerHTML = `<div class="backlog-section">
-    <div class="backlog-header">Backlog <span class="backlog-count">${tasks.length}</span></div>
-    ${tasks.map(t=>renderTask(t)).join('')}
-  </div>`;
+  el.innerHTML = `<div class="backlog-section"><div class="backlog-header">Backlog <span class="backlog-count">${tasks.length}</span></div>${tasks.map(t=>renderTask(t)).join('')}</div>`;
 }
 
 function renderTask(task) {
   const assignee = task.assignee ? data.team.find(m=>m.id===task.assignee) : null;
-  const bc = blockedByCount(task.id);
-  const hl = highlightedTasks.has(task.id);
-  const hasBlocker = task.blockedBy?.length > 0;
-  return `<div class="task ${hl?'highlighted':''}" id="task-${task.id}">
-    <div class="task-status-btn ${task.status}" onclick="cycleStatus('${task.id}')" title="${STATUS_LABELS[task.status]||task.status}">
+  const bc = blockerCount(task.id);
+  const blockers = getBlockerTasks(task);
+  const isHlBlocked = highlightedTasks.has(task.id) && highlightMode === 'blocked';
+  const isHlBlocker = highlightedTasks.has(task.id) && highlightMode === 'blocker';
+  const isSel = selectedTasks.has(task.id);
+
+  const blockerNames = blockers.map(t=>t.title);
+  const blockedByThisNames = getBlockedByThisTask(task.id).map(id=>{ const t=findTask(id); return t?t.title:''; }).filter(Boolean);
+
+  return `<div class="task ${isHlBlocked?'highlighted':''} ${isHlBlocker?'blocker-highlighted':''} ${isSel?'selected-task':''}" id="task-${task.id}" onclick="onTaskClick(event,'${task.id}')">
+    <div class="task-checkbox ${isSel?'checked':''}" onclick="event.stopPropagation();toggleSelect('${task.id}')">${isSel?'✓':''}</div>
+    <div class="task-status-btn ${task.status==='blocked'?'blocked-status':task.status}" onclick="event.stopPropagation();cycleStatus('${task.id}')" title="${STATUS_LABELS[task.status]||task.status}">
       ${task.status==='done'?'✓':task.status==='in-progress'?'●':task.status==='review'?'◎':task.status==='blocked'?'✕':''}
     </div>
     <div class="task-main">
@@ -420,17 +529,17 @@ function renderTask(task) {
       <div class="task-badges">
         ${task.priority==='high'?'<span class="badge badge-high">↑ High</span>':task.priority==='low'?'<span class="badge badge-low">↓ Low</span>':''}
         ${task.backlog?'<span class="badge badge-backlog">Backlog</span>':''}
-        ${hasBlocker?'<span class="badge badge-blocked-on">⊘ Blocked</span>':''}
+        ${blockers.length>0?`<span class="badge badge-is-blocked" onclick="event.stopPropagation();highlightBlockers('${task.id}')"
+          onmouseenter="showTooltip(event,${JSON.stringify(blockerNames.map(n=>'⊘ '+n))})"
+          onmouseleave="hideTooltip()">⊘ Blocked</span>`:''}
       </div>
       ${task.notes?`<div class="task-note">${task.notes}</div>`:''}
     </div>
     <div class="task-right">
-      ${bc>0?`<span class="blocked-badge" onclick="highlightBlocked('${task.id}')" title="Highlight blocked tasks">${bc}</span>`:''}
+      ${bc>0?`<span class="blockers-count" onclick="event.stopPropagation();highlightBlocked('${task.id}')"
+        onmouseenter="showTooltip(event,${JSON.stringify(blockedByThisNames.map(n=>'● '+n))})"
+        onmouseleave="hideTooltip()">${bc}</span>`:''}
       ${assignee?`<div class="assignee-dot" style="background:${assignee.color}" title="${assignee.name}">${assignee.name[0]}</div>`:''}
-      <div class="task-actions">
-        <button class="icon-btn" onclick="editTask('${task.id}')">✏</button>
-        <button class="icon-btn btn-danger" onclick="deleteTask('${task.id}')">✕</button>
-      </div>
     </div>
   </div>`;
 }
@@ -440,7 +549,7 @@ function renderKanban(cat) {
   const tasks = (cat.phases||[]).flatMap(p=>p.tasks||[]).filter(t=>!t.backlog&&taskMatches(t,filters));
   const cols = ['todo','in-progress','review','blocked','done'];
   const colLabels = {todo:'To do','in-progress':'In progress',review:'Review',blocked:'Blocked',done:'Done'};
-  document.getElementById('content').innerHTML = `<div class="kanban">${cols.map(col=>{
+  document.getElementById('content').innerHTML = `<div class="kanban-wrap">${cols.map(col=>{
     const ct = tasks.filter(t=>t.status===col);
     return `<div class="kanban-col col-${col}">
       <div class="kanban-col-header"><div class="kanban-dot"></div>${colLabels[col]}<span class="kanban-count">${ct.length}</span></div>
@@ -449,62 +558,205 @@ function renderKanban(cat) {
         return `<div class="kanban-card" onclick="editTask('${t.id}')">
           <div class="kanban-card-title">${t.title}</div>
           <div class="kanban-card-footer">
-            ${t.priority==='high'?'<span class="badge badge-high">↑</span>':t.priority==='low'?'<span class="badge badge-low">↓</span>':''}
-            ${a?`<div class="assignee-dot" style="background:${a.color};width:18px;height:18px;font-size:9px">${a.name[0]}</div>`:''}
+            ${t.priority==='high'?'<span class="badge badge-high" style="font-size:10px">↑</span>':t.priority==='low'?'<span class="badge badge-low" style="font-size:10px">↓</span>':''}
+            ${a?`<div class="assignee-dot" style="background:${a.color};width:18px;height:18px;font-size:9px;margin-left:auto">${a.name[0]}</div>`:''}
           </div>
         </div>`;
       }).join('')}
-      <button class="btn btn-sm" style="margin-top:4px;width:100%;justify-content:center" onclick="addTaskToStatus('${cat.id}','${col}')">+ Add</button>
-      </div>
-    </div>`;
+      <button class="btn btn-sm" style="margin-top:6px;width:100%;justify-content:center" onclick="addTaskToStatus('${cat.id}','${col}')">+ Add</button>
+      </div></div>`;
   }).join('')}</div>`;
+}
+
+function renderMyTasks() {
+  const el = document.getElementById('content');
+  el.className = 'content';
+  document.getElementById('modeToggle').style.display = 'none';
+
+  if (!myUserId) {
+    el.innerHTML = `<div class="my-tasks-empty"><div style="font-size:32px;margin-bottom:12px;opacity:.4">★</div>Go to the Team tab and click <strong>Set as me</strong> on your profile to see your tasks here.</div>`;
+    return;
+  }
+  const me = data.team.find(m=>m.id===myUserId);
+  if (!me) { myUserId=null; localStorage.removeItem('my_user_id'); render(); return; }
+
+  const filters = getFilters();
+  const myTasks = [];
+  for (const cat of data.categories) for (const ph of cat.phases||[]) for (const t of ph.tasks||[]) {
+    if (t.assignee===myUserId && taskMatches(t,filters)) myTasks.push({task:t, catName:cat.name, phName:ph.title});
+  }
+
+  if (!myTasks.length) {
+    el.innerHTML = `<div class="my-tasks-empty"><div style="font-size:32px;margin-bottom:12px;opacity:.4">★</div>No tasks assigned to you yet.</div>`;
+    return;
+  }
+
+  // Group by category
+  const byCat = {};
+  for (const {task,catName,phName} of myTasks) {
+    if (!byCat[catName]) byCat[catName] = [];
+    byCat[catName].push({task,phName});
+  }
+
+  el.innerHTML = Object.entries(byCat).map(([catName, items]) => `
+    <div class="person-section">
+      <div class="person-section-header">
+        <span style="font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em">${catName}</span>
+      </div>
+      <div class="phase" style="margin-bottom:0">
+        <div class="phase-body">${items.map(({task,phName})=>`
+          ${renderTask(task)}
+        `).join('')}
+        </div>
+      </div>
+    </div>`).join('');
 }
 
 function renderTeam() {
   const el = document.getElementById('content');
+  el.className = 'content';
+  document.getElementById('modeToggle').style.display = 'none';
+
   const tc = {};
   for (const c of data.categories) for (const p of c.phases||[]) for (const t of p.tasks||[]) if(t.assignee) tc[t.assignee]=(tc[t.assignee]||0)+1;
+
   el.innerHTML = `<div class="team-grid">
     ${data.team.map(m=>`<div class="member-card">
-      <div class="member-avatar" style="background:${m.color}">${m.name[0]}</div>
-      <div class="member-info"><div class="member-name">${m.name}</div><div class="member-role">${m.role||'No role'}</div><div class="member-tasks">${tc[m.id]||0} tasks</div></div>
-      <div class="member-actions"><button class="icon-btn" onclick="editMember('${m.id}')">✏</button><button class="icon-btn btn-danger" onclick="deleteMember('${m.id}')">✕</button></div>
+      <div class="member-avatar" style="background:${m.color}">${m.name[0]}${myUserId===m.id?'<div class="me-badge">★</div>':''}</div>
+      <div class="member-info">
+        <div class="member-name">${m.name}</div>
+        <div class="member-role">${m.role||'No role'}</div>
+        <div class="member-tasks-count">${tc[m.id]||0} tasks assigned</div>
+      </div>
+      <div class="member-actions">
+        <button class="btn btn-sm ${myUserId===m.id?'btn-primary':''}" onclick="setAsMe('${m.id}')">${myUserId===m.id?'★ Me':'Set as me'}</button>
+        <button class="icon-btn" onclick="editMember('${m.id}')">✏</button>
+        <button class="icon-btn btn-danger" onclick="deleteMember('${m.id}')">✕</button>
+      </div>
     </div>`).join('')}
-    <div class="member-card" style="cursor:pointer;border-style:dashed;justify-content:center;color:var(--text3)" onclick="addMember()"><div style="font-size:13px">+ Add member</div></div>
+    <div class="member-card" style="cursor:pointer;border-style:dashed;justify-content:center;color:var(--text3)" onclick="addMember()">
+      <div style="font-size:13px">+ Add member</div>
+    </div>
   </div>
   ${data.team.map(m=>{
     const my=[];
     for(const c of data.categories)for(const p of c.phases||[])for(const t of p.tasks||[])if(t.assignee===m.id)my.push({t,cat:c.name});
     if(!my.length)return '';
-    return `<div style="margin-bottom:20px">
-      <div style="font-size:13px;font-weight:600;color:var(--text2);margin-bottom:10px;display:flex;align-items:center;gap:10px">
+    return `<div class="person-section">
+      <div class="person-section-header">
         <div class="assignee-dot" style="background:${m.color}">${m.name[0]}</div>${m.name}'s tasks
       </div>
-      ${my.map(({t,cat})=>`<div class="task" style="margin-bottom:4px;border-radius:6px;border:1px solid var(--border);background:var(--bg2)">
-        <div class="task-status-btn ${t.status}">${t.status==='done'?'✓':t.status==='in-progress'?'●':t.status==='review'?'◎':t.status==='blocked'?'✕':''}</div>
-        <div class="task-main"><div class="task-title ${t.status==='done'?'done':''}">${t.title}</div><div class="task-badges"><span class="badge" style="background:var(--bg4);color:var(--text3)">${cat}</span></div></div>
-      </div>`).join('')}
+      <div class="phase" style="margin-bottom:0"><div class="phase-body">${my.map(({t})=>renderTask(t)).join('')}</div></div>
     </div>`;
   }).join('')}`;
 }
 
-// ── Actions ───────────────────────────────────────────────────────────────────
-function switchTab(id) { activeTab=id; highlightedTasks.clear(); render(); }
-function switchSubTab(catId, sub) { activeSubTab[catId]=sub; render(); }
+// ── Interactions ──────────────────────────────────────────────────────────────
+function switchTab(id) { activeTab=id; highlightedTasks.clear(); if(selectMode)toggleSelectMode(); render(); }
+function switchSubTab(catId,sub) { activeSubTab[catId]=sub; render(); }
 function setMode(m) { const c=data.categories.find(x=>x.id===activeTab); if(c){c.mode=m;save();render();} }
 function togglePhase(catId,phId) { const ph=findPhase(catId,phId); if(ph){ph.collapsed=!ph.collapsed;save();render();} }
 function collapseAll() { const c=data.categories.find(x=>x.id===activeTab); if(c)for(const p of c.phases||[])p.collapsed=true; save();render(); }
 function expandAll() { const c=data.categories.find(x=>x.id===activeTab); if(c)for(const p of c.phases||[])p.collapsed=false; save();render(); }
+
+function onTaskClick(e, taskId) {
+  // Don't open edit if clicking interactive children
+  if (e.target.closest('.task-status-btn,.task-checkbox,.badge-is-blocked,.blockers-count,.assignee-dot')) return;
+  if (selectMode) { toggleSelect(taskId); return; }
+  editTask(taskId);
+}
+
 function cycleStatus(id) {
   const t=findTask(id); if(!t)return;
   const o=['todo','in-progress','review','done','blocked'];
   t.status=o[(o.indexOf(t.status)+1)%o.length];
-  save();render();
+  save(); render();
 }
-function highlightBlocked(id) {
-  highlightedTasks=new Set(getBlockedTaskIds(id));
+
+// Highlight tasks that are blocking this task (click the "⊘ Blocked" badge)
+function highlightBlockers(taskId) {
+  const task = findTask(taskId); if(!task)return;
+  highlightedTasks = new Set(task.blockedBy||[]);
+  highlightMode = 'blocker';
   render();
   setTimeout(()=>{highlightedTasks.clear();render();},3000);
+}
+
+// Highlight tasks blocked by this task (click the red number badge)
+function highlightBlocked(taskId) {
+  highlightedTasks = new Set(getBlockedByThisTask(taskId));
+  highlightMode = 'blocked';
+  render();
+  setTimeout(()=>{highlightedTasks.clear();render();},3000);
+}
+
+// ── Select / Batch ────────────────────────────────────────────────────────────
+function toggleSelectMode() {
+  selectMode = !selectMode;
+  selectedTasks.clear();
+  document.getElementById('selectModeBtn').classList.toggle('active', selectMode);
+  document.getElementById('batchBar').classList.toggle('visible', false);
+  render();
+}
+function toggleSelect(taskId) {
+  if (selectedTasks.has(taskId)) selectedTasks.delete(taskId);
+  else selectedTasks.add(taskId);
+  document.getElementById('batchCount').textContent = selectedTasks.size + ' selected';
+  document.getElementById('batchBar').classList.toggle('visible', selectedTasks.size > 0);
+  const el = document.getElementById('task-'+taskId);
+  if (el) {
+    el.classList.toggle('selected-task', selectedTasks.has(taskId));
+    const cb = el.querySelector('.task-checkbox');
+    if (cb) { cb.classList.toggle('checked', selectedTasks.has(taskId)); cb.textContent = selectedTasks.has(taskId)?'✓':''; }
+  }
+}
+function clearSelection() { selectedTasks.clear(); document.getElementById('batchBar').classList.remove('visible'); render(); }
+function applyBatch() {
+  const assignee = document.getElementById('batchAssignee').value;
+  const priority = document.getElementById('batchPriority').value;
+  const status = document.getElementById('batchStatus').value;
+  if (!assignee && !priority && !status) return;
+  for (const id of selectedTasks) {
+    const t = findTask(id); if(!t)continue;
+    if (assignee) t.assignee = assignee==='__none__' ? null : assignee;
+    if (priority) t.priority = priority;
+    if (status) t.status = status;
+  }
+  save(); clearSelection(); render();
+}
+
+function setAsMe(id) {
+  myUserId = myUserId===id ? null : id;
+  localStorage.setItem('my_user_id', myUserId||'');
+  render();
+}
+
+// ── Goto task ─────────────────────────────────────────────────────────────────
+function gotoTask(taskId) {
+  closeModal();
+  // Find which category and phase it's in
+  for (const cat of data.categories) {
+    for (const ph of cat.phases||[]) {
+      const t = (ph.tasks||[]).find(x=>x.id===taskId);
+      if (t) {
+        // Switch to the right tab and sub-tab
+        activeTab = cat.id;
+        activeSubTab[cat.id] = t.backlog ? 'backlog' : 'tasks';
+        ph.collapsed = false;
+        save();
+        render();
+        setTimeout(()=>{
+          const el = document.getElementById('task-'+taskId);
+          if (el) {
+            el.scrollIntoView({behavior:'smooth',block:'center'});
+            el.classList.add('highlighted');
+            setTimeout(()=>el.classList.remove('highlighted'),2500);
+          }
+        },100);
+        return;
+      }
+    }
+  }
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -519,14 +771,41 @@ function openModal(html){document.getElementById('modal').innerHTML=html;documen
 function closeModal(){document.getElementById('modalOverlay').style.display='none';}
 function closeModalOverlay(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
 
+// ── Task modal ────────────────────────────────────────────────────────────────
 function addTask(catId,phId){showTaskModal(null,catId,phId,'todo');}
 function addTaskToStatus(catId,status){const c=data.categories.find(x=>x.id===catId);if(c?.phases?.length)showTaskModal(null,catId,c.phases[0].id,status);}
-function editTask(id){const t=findTask(id);if(!t)return;for(const c of data.categories)for(const p of c.phases||[])if(p.tasks?.find(x=>x.id===id)){showTaskModal(t,c.id,p.id,t.status);return;}}
+function editTask(id){
+  const t=findTask(id);if(!t)return;
+  for(const c of data.categories)for(const p of c.phases||[])if(p.tasks?.find(x=>x.id===id)){showTaskModal(t,c.id,p.id,t.status);return;}
+}
 
 function showTaskModal(task,catId,phId,defStatus){
   const isNew=!task;
   const t=task||{id:uid(),title:'',status:defStatus||'todo',priority:'medium',assignee:null,blockedBy:[],backlog:false,notes:''};
-  const others=allTasks().filter(x=>x.id!==t.id);
+  // Split tasks for dep section: existing blockers first, then non-done others
+  const allOthers = allTasks().filter(x=>x.id!==t.id);
+  const currentBlockers = allOthers.filter(x=>t.blockedBy?.includes(x.id));
+  const available = allOthers.filter(x=>!t.blockedBy?.includes(x.id) && x.status!=='done');
+
+  const statusIcon = s => s==='in-progress'?'●':s==='review'?'◎':s==='blocked'?'✕':s==='todo'?'○':'';
+  const statusClass = s => s==='blocked'?'blocked-st':s;
+
+  const blockersHtml = currentBlockers.length ? `
+    <div class="dep-header" style="color:#f87171">Blocking this task</div>
+    ${currentBlockers.map(x=>`<div class="dep-item is-blocker" data-dep="${x.id}">
+      <div class="dep-check checked">✓</div>
+      <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${x.title}</span>
+      <button class="dep-goto" onclick="gotoTask('${x.id}')" title="Go to this task">↗ Go to</button>
+    </div>`).join('')}` : '';
+
+  const availableHtml = available.length ? `
+    <div class="dep-header">Add blocker</div>
+    ${available.map(x=>`<div class="dep-item" data-dep="${x.id}" onclick="toggleDep(this,'${x.id}')">
+      <div class="dep-check"></div>
+      <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${x.title}</span>
+      <span class="dep-status ${statusClass(x.status)}">${statusIcon(x.status)} ${STATUS_LABELS[x.status]||x.status}</span>
+    </div>`).join('')}` : '';
+
   openModal(`
     <div class="modal-header"><span class="modal-title">${isNew?'New task':'Edit task'}</span><button class="icon-btn" onclick="closeModal()">✕</button></div>
     <div class="modal-body">
@@ -540,10 +819,9 @@ function showTaskModal(task,catId,phId,defStatus){
       <div class="form-group"><label class="form-label">Assignee</label>
         <select class="form-select" id="tf-assignee"><option value="">Unassigned</option>${data.team.map(m=>`<option value="${m.id}" ${t.assignee===m.id?'selected':''}>${m.name}</option>`).join('')}</select>
       </div>
-      <div class="form-group"><label class="form-label">Blocked by</label><div class="dep-list">
-        ${others.length===0?'<div style="color:var(--text3);font-size:12px;padding:4px">No other tasks</div>':
-          others.map(x=>`<div class="dep-item" onclick="toggleDep(this,'${x.id}')"><div class="dep-check ${t.blockedBy?.includes(x.id)?'checked':''}">${t.blockedBy?.includes(x.id)?'✓':''}</div><span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${x.title}</span></div>`).join('')}
-      </div></div>
+      <div class="form-group"><label class="form-label">Blocked by</label>
+        <div class="dep-section">${blockersHtml}${availableHtml}${!currentBlockers.length&&!available.length?'<div style="color:var(--text3);font-size:12px;padding:4px">No other open tasks</div>':''}</div>
+      </div>
       <div class="form-group"><label class="form-label">Notes</label><textarea class="form-textarea" id="tf-notes">${escHtml(t.notes||'')}</textarea></div>
       <div class="form-group">
         <label class="radio-option ${t.backlog?'selected':''}" onclick="toggleBl(this)" style="display:inline-flex">
@@ -552,13 +830,19 @@ function showTaskModal(task,catId,phId,defStatus){
       </div>
     </div>
     <div class="modal-footer">
+      ${!isNew?`<button class="btn btn-danger btn-sm" onclick="deleteTask('${t.id}');closeModal()" style="margin-right:auto">Delete</button>`:''}
       <button class="btn" onclick="closeModal()">Cancel</button>
       <button class="btn btn-primary" onclick="saveTask('${isNew}','${t.id}','${catId}','${phId}')">${isNew?'Add task':'Save'}</button>
     </div>`);
 }
 
 function selR(el,name,val){document.querySelectorAll(`input[name="${name}"]`).forEach(r=>{r.checked=r.value===val;r.closest('.radio-option').classList.toggle('selected',r.value===val);});}
-function toggleDep(el,id){const c=el.querySelector('.dep-check');const on=c.classList.contains('checked');c.classList.toggle('checked',!on);c.textContent=!on?'✓':'';}
+function toggleDep(el,id){
+  const check=el.querySelector('.dep-check');
+  const on=check.classList.contains('checked');
+  check.classList.toggle('checked',!on);
+  check.textContent=!on?'✓':'';
+}
 function toggleBl(el){const cb=el.querySelector('input[type=checkbox]');cb.checked=!cb.checked;el.classList.toggle('selected',cb.checked);}
 
 function saveTask(isNew,taskId,catId,phId){
@@ -569,7 +853,11 @@ function saveTask(isNew,taskId,catId,phId){
   const assignee=document.getElementById('tf-assignee').value||null;
   const notes=document.getElementById('tf-notes').value.trim();
   const backlog=document.getElementById('tf-backlog').checked;
-  const blockedBy=[...document.querySelectorAll('.dep-check.checked')].map(el=>el.closest('.dep-item').getAttribute('onclick').match(/'([^']+)'/)[1]);
+  // Collect blockedBy from dep section
+  const blockedBy=[
+    ...[...document.querySelectorAll('.dep-item.is-blocker[data-dep]')].map(el=>el.getAttribute('data-dep')), // existing blockers stay
+    ...[...document.querySelectorAll('.dep-item:not(.is-blocker) .dep-check.checked')].map(el=>el.closest('[data-dep]')?.getAttribute('data-dep')).filter(Boolean)
+  ];
   if(isNew==='true'){
     const ph=findPhase(catId,phId);if(!ph)return;
     if(!ph.tasks)ph.tasks=[];
@@ -580,20 +868,26 @@ function saveTask(isNew,taskId,catId,phId){
   }
   save();closeModal();render();
 }
-function deleteTask(id){if(!confirm('Delete this task?'))return;for(const c of data.categories)for(const p of c.phases||[]){const i=p.tasks?.findIndex(t=>t.id===id);if(i>=0){p.tasks.splice(i,1);save();render();return;}}}
 
+function deleteTask(id){
+  for(const c of data.categories)for(const p of c.phases||[]){const i=p.tasks?.findIndex(t=>t.id===id);if(i>=0){p.tasks.splice(i,1);save();render();return;}}
+}
+
+// ── Phase ─────────────────────────────────────────────────────────────────────
 function addPhase(catId){openModal(`<div class="modal-header"><span class="modal-title">New phase</span><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="modal-body"><div class="form-group"><label class="form-label">Phase name</label><input class="form-input" id="pf-title" placeholder="e.g. Phase 1: Foundation"></div></div><div class="modal-footer"><button class="btn" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="savePhase('${catId}',null)">Add</button></div>`);}
 function editPhase(catId,phId){const ph=findPhase(catId,phId);openModal(`<div class="modal-header"><span class="modal-title">Edit phase</span><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="modal-body"><div class="form-group"><label class="form-label">Phase name</label><input class="form-input" id="pf-title" value="${escHtml(ph.title)}"></div></div><div class="modal-footer"><button class="btn" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="savePhase('${catId}','${phId}')">Save</button></div>`);}
 function savePhase(catId,phId){const title=document.getElementById('pf-title').value.trim();if(!title)return;const c=data.categories.find(x=>x.id===catId);if(!c)return;if(!c.phases)c.phases=[];if(phId){const ph=c.phases.find(p=>p.id===phId);if(ph)ph.title=title;}else c.phases.push({id:uid(),title,collapsed:false,tasks:[]});save();closeModal();render();}
 function deletePhase(catId,phId){if(!confirm('Delete this phase and all tasks?'))return;const c=data.categories.find(x=>x.id===catId);if(c)c.phases=(c.phases||[]).filter(p=>p.id!==phId);save();render();}
 
+// ── Category ──────────────────────────────────────────────────────────────────
 function addCategory(){openModal(`<div class="modal-header"><span class="modal-title">New category</span><button class="icon-btn" onclick="closeModal()">✕</button></div><div class="modal-body"><div class="form-group"><label class="form-label">Name</label><input class="form-input" id="cf-name" placeholder="Art, Design, QA…"></div><div class="form-group"><label class="form-label">Icon</label><input class="form-input" id="cf-icon" placeholder="◇" style="max-width:80px"></div><div class="form-group"><label class="form-label">Mode</label><div class="radio-group"><label class="radio-option selected" onclick="selR(this,'cf-mode','list')"><input type="radio" name="cf-mode" value="list" checked style="display:none">☰ List</label><label class="radio-option" onclick="selR(this,'cf-mode','kanban')"><input type="radio" name="cf-mode" value="kanban" style="display:none">⊞ Board</label></div></div></div><div class="modal-footer"><button class="btn" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveCategory()">Add</button></div>`);}
 function saveCategory(){const name=document.getElementById('cf-name').value.trim();if(!name)return;const icon=document.getElementById('cf-icon').value.trim()||'◇';const mode=document.querySelector('input[name="cf-mode"]:checked')?.value||'list';data.categories.push({id:uid(),name,icon,mode,phases:[]});save();closeModal();render();}
 
+// ── Member ────────────────────────────────────────────────────────────────────
 function addMember(){showMemberModal(null);}
 function editMember(id){const m=data.team.find(x=>x.id===id);if(m)showMemberModal(m);}
 function showMemberModal(member){
-  const isNew=!member;const m=member||{id:uid(),name:'',role:'',color:MEMBER_COLORS[0]};
+  const isNew=!member; const m=member||{id:uid(),name:'',role:'',color:MEMBER_COLORS[0]};
   openModal(`<div class="modal-header"><span class="modal-title">${isNew?'Add member':'Edit member'}</span><button class="icon-btn" onclick="closeModal()">✕</button></div>
   <div class="modal-body">
     <div class="form-group"><label class="form-label">Name</label><input class="form-input" id="mf-name" value="${escHtml(m.name)}"></div>
@@ -606,6 +900,7 @@ function selColor(el,c){document.querySelectorAll('.color-swatch').forEach(s=>s.
 function saveMember(isNew,id){const name=document.getElementById('mf-name').value.trim();if(!name)return;const role=document.getElementById('mf-role').value.trim();const color=document.getElementById('mf-color').value;if(isNew==='true')data.team.push({id,name,role,color});else{const m=data.team.find(x=>x.id===id);if(m)Object.assign(m,{name,role,color});}save();closeModal();render();}
 function deleteMember(id){if(!confirm('Remove member?'))return;data.team=data.team.filter(m=>m.id!==id);for(const c of data.categories)for(const p of c.phases||[])for(const t of p.tasks||[])if(t.assignee===id)t.assignee=null;save();render();}
 
+// ── Settings ──────────────────────────────────────────────────────────────────
 function openSettings(){
   const cfg=githubConfig||{};
   openModal(`<div class="modal-header"><span class="modal-title">Settings</span><button class="icon-btn" onclick="closeModal()">✕</button></div>
@@ -613,13 +908,13 @@ function openSettings(){
     <div class="form-group"><label class="form-label">Project name</label><input class="form-input" id="sf-name" value="${escHtml(data.meta.projectName||'')}"></div>
     <div style="border-top:1px solid var(--border);padding-top:14px;margin-top:4px">
       <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:10px">GitHub sync</div>
-      <div class="form-group"><label class="form-label">Personal access token</label><input class="form-input" id="sf-token" type="password" value="${cfg.token||''}" placeholder="ghp_…"><div style="font-size:11px;color:var(--text3);margin-top:4px">github.com → Settings → Developer settings → Fine-grained tokens. Contents: Read & write.</div></div>
-      <div class="form-group"><label class="form-label">Owner (your username)</label><input class="form-input" id="sf-owner" value="${cfg.owner||'Cinky8'}"></div>
-      <div class="form-group"><label class="form-label">Repository name</label><input class="form-input" id="sf-repo" value="${cfg.repo||'incubator-roadmap'}"></div>
+      <div class="form-group"><label class="form-label">Personal access token</label><input class="form-input" id="sf-token" type="password" value="${cfg.token||''}" placeholder="ghp_…"><div style="font-size:11px;color:var(--text3);margin-top:4px">github.com → Settings → Developer settings → Fine-grained tokens. Contents: Read &amp; write.</div></div>
+      <div class="form-group"><label class="form-label">Owner</label><input class="form-input" id="sf-owner" value="${cfg.owner||'Cinky8'}"></div>
+      <div class="form-group"><label class="form-label">Repository</label><input class="form-input" id="sf-repo" value="${cfg.repo||'incubator-roadmap'}"></div>
       <div class="form-group"><label class="form-label">File path</label><input class="form-input" id="sf-path" value="${cfg.path||'roadmap.json'}"></div>
     </div>
     <div style="border-top:1px solid var(--border);padding-top:14px;margin-top:4px">
-      <button class="btn btn-danger btn-sm" onclick="clearLocalData()">Clear local data (reload from GitHub)</button>
+      <button class="btn btn-danger btn-sm" onclick="clearLocalData()">Clear local data (reload from file)</button>
     </div>
   </div>
   <div class="modal-footer"><button class="btn" onclick="closeModal()">Cancel</button><button class="btn btn-primary" onclick="saveSettings()">Save</button></div>`);
@@ -635,7 +930,7 @@ function saveSettings(){
   else{githubConfig=null;localStorage.removeItem('gh_config');}
   save();closeModal();updateSyncUI();render();
 }
-function clearLocalData(){if(!confirm('Clear local data and reload from file?'))return;localStorage.removeItem('roadmap_data');location.reload();}
+function clearLocalData(){if(!confirm('Clear local data and reload?'))return;localStorage.removeItem('roadmap_data');location.reload();}
 
 init();
 </script>
