@@ -750,7 +750,7 @@
         {
           "id": "ph-13",
           "title": "Phase 18: Power progression (Lab Upgrades)",
-          "collapsed": true,
+          "collapsed": false,
           "tasks": [
             {
               "id": "c13-1",
