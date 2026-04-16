@@ -1085,7 +1085,21 @@
           "id": "id-1776349675691-6o2h",
           "title": "aaa",
           "collapsed": false,
-          "tasks": []
+          "tasks": [
+            {
+              "id": "id-1776349690481-f1f5",
+              "title": "aaaa",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c11-1",
+                "c11-2"
+              ],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
         },
         {
           "id": "id-1776349680165-ko7g",
