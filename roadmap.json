@@ -23,7 +23,7 @@
       "id": "cat-code",
       "name": "Code",
       "icon": "⚙",
-      "mode": "list",
+      "mode": "kanban",
       "phases": [
         {
           "id": "ph-1",
