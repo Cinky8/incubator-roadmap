@@ -1146,7 +1146,7 @@
               "title": "ssss",
               "status": "todo",
               "priority": "medium",
-              "assignee": null,
+              "assignee": "t1",
               "blockedBy": [],
               "backlog": false,
               "notes": ""
