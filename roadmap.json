@@ -1078,7 +1078,7 @@
         {
           "id": "ph-cont-1",
           "title": "Fire Creature",
-          "collapsed": true,
+          "collapsed": false,
           "tasks": [
             {
               "id": "cont-1-1",
