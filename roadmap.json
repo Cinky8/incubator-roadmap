@@ -653,7 +653,7 @@
             {
               "id": "c11-2",
               "title": "Heat applied at run start via difficulty multiplier injected into enemy stats",
-              "status": "in-progress",
+              "status": "review",
               "priority": "high",
               "assignee": null,
               "blockedBy": [
@@ -665,7 +665,7 @@
             {
               "id": "c11-3",
               "title": "DNA reward multiplier scales with heat tier",
-              "status": "in-progress",
+              "status": "review",
               "priority": "medium",
               "assignee": null,
               "blockedBy": [
@@ -677,7 +677,7 @@
             {
               "id": "c11-4",
               "title": "Heat selector UI on level map card",
-              "status": "in-progress",
+              "status": "review",
               "priority": "high",
               "assignee": null,
               "blockedBy": [
