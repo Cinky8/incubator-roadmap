@@ -645,7 +645,7 @@
               "title": "HeatConfig ScriptableObject — per-tier enemy stat multipliers (HP, damage, speed)",
               "status": "todo",
               "priority": "high",
-              "assignee": null,
+              "assignee": "t1",
               "blockedBy": [],
               "backlog": false,
               "notes": ""
