@@ -638,7 +638,7 @@
         {
           "id": "ph-11",
           "title": "Phase 16: Heat / difficulty system",
-          "collapsed": true,
+          "collapsed": false,
           "tasks": [
             {
               "id": "c11-1",
