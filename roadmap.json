@@ -1085,7 +1085,18 @@
           "id": "id-1776350375344-hcvc",
           "title": "aaa",
           "collapsed": false,
-          "tasks": []
+          "tasks": [
+            {
+              "id": "id-1776350388163-xwau",
+              "title": "aaaa",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
         },
         {
           "id": "id-1776350381059-zp22",
