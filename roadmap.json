@@ -1134,13 +1134,24 @@
       "id": "cat-art",
       "name": "Art",
       "icon": "◈",
-      "mode": "list",
+      "mode": "kanban",
       "phases": [
         {
           "id": "id-1776350421272-v3m7",
           "title": "aaaa",
           "collapsed": false,
-          "tasks": []
+          "tasks": [
+            {
+              "id": "id-1776350426901-ys9l",
+              "title": "ssss",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
         },
         {
           "id": "id-1776350424640-ie48",
