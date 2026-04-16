@@ -28,7 +28,7 @@
         {
           "id": "ph-1",
           "title": "Phases 1–6: Foundation",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c1-1",
