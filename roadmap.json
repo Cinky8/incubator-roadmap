@@ -1080,7 +1080,14 @@
       "name": "Content",
       "icon": "◇",
       "mode": "list",
-      "phases": []
+      "phases": [
+        {
+          "id": "id-1776349675691-6o2h",
+          "title": "aaa",
+          "collapsed": false,
+          "tasks": []
+        }
+      ]
     },
     {
       "id": "cat-ui",
