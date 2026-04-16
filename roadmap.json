@@ -233,7 +233,7 @@
         {
           "id": "ph-4",
           "title": "Phase 9: Game loop",
-          "collapsed": true,
+          "collapsed": false,
           "tasks": [
             {
               "id": "c4-1",
@@ -280,7 +280,7 @@
         {
           "id": "ph-5",
           "title": "Phase 10: Core UI & menus",
-          "collapsed": true,
+          "collapsed": false,
           "tasks": [
             {
               "id": "c5-1",
