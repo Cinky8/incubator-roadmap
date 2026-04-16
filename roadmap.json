@@ -667,7 +667,7 @@
               "title": "DNA reward multiplier scales with heat tier",
               "status": "todo",
               "priority": "medium",
-              "assignee": null,
+              "assignee": "t1",
               "blockedBy": [
                 "c11-1"
               ],
