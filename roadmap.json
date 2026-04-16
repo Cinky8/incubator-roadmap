@@ -677,7 +677,7 @@
             {
               "id": "c11-4",
               "title": "Heat selector UI on level map card",
-              "status": "in-progress",
+              "status": "todo",
               "priority": "high",
               "assignee": null,
               "blockedBy": [
@@ -689,7 +689,7 @@
             {
               "id": "c11-5",
               "title": "Heat stars shown on map node and run summary",
-              "status": "in-progress",
+              "status": "todo",
               "priority": "medium",
               "assignee": null,
               "blockedBy": [
