@@ -156,7 +156,7 @@
         {
           "id": "ph-3",
           "title": "Phase 8: Progression, upgrades & passives",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c3-1",
@@ -233,7 +233,7 @@
         {
           "id": "ph-4",
           "title": "Phase 9: Game loop",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c4-1",
@@ -280,7 +280,7 @@
         {
           "id": "ph-5",
           "title": "Phase 10: Core UI & menus",
-          "collapsed": false,
+          "collapsed": true,
           "tasks": [
             {
               "id": "c5-1",
