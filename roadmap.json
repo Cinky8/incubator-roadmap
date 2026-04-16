@@ -1,194 +1,1121 @@
 {
-  "meta": { "projectName": "Project Incubator", "version": "1.1.0", "lastUpdated": "2026-04-16" },
+  "meta": {
+    "projectName": "Project Incubator",
+    "version": "1.1.0",
+    "lastUpdated": "2026-04-16"
+  },
   "team": [
-    { "id": "t1", "name": "You", "role": "Developer", "color": "#6366f1" }
+    {
+      "id": "t1",
+      "name": "Adam",
+      "role": "Design/Vibe",
+      "color": "#6366f1"
+    },
+    {
+      "id": "id-1776347246399-1yka",
+      "name": "Dano",
+      "role": "Art",
+      "color": "#22c55e"
+    }
   ],
   "categories": [
     {
-      "id": "cat-code", "name": "Code", "icon": "⚙", "mode": "list",
+      "id": "cat-code",
+      "name": "Code",
+      "icon": "⚙",
+      "mode": "list",
       "phases": [
-        { "id": "ph-1", "title": "Phases 1–6: Foundation", "collapsed": true, "tasks": [
-            { "id": "c1-1", "title": "Player movement — WASD, gamepad, mobile joystick", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c1-2", "title": "Player health, damage, knockback, invincibility frames, elemental resistances", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c1-3", "title": "Element system (ElementType, ElementModifier)", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c1-4", "title": "Enemy ScriptableObject data, modular movement & attack behaviors", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c1-5", "title": "Enemy attacks: melee, projectile, AoE with danger zones", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c1-6", "title": "Loot drops, LootTable, magnetic XP/currency pickups", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-2", "title": "Phase 7: Player combat & health UI", "collapsed": true, "tasks": [
-            { "id": "c2-1", "title": "CreatureData & AbilityData ScriptableObjects", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c2-2", "title": "PlayerCombat auto-attack system", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c2-3", "title": "Ability types: Projectile, Melee, AoE, Cone", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c2-4", "title": "TargetFinder, AbilityRangeIndicator", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c2-5", "title": "PlayerProjectile with element damage", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c2-6", "title": "World-space health bar + floating damage numbers", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-3", "title": "Phase 8: Progression, upgrades & passives", "collapsed": true, "tasks": [
-            { "id": "c3-1", "title": "XP system, leveling, PlayerStats with modifier stacking", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c3-2", "title": "StatType, LevelingConfig, LevelUpHandler", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c3-3", "title": "UpgradeData, UpgradePool, UpgradeRarity, RarityWeight", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c3-4", "title": "Level-up panel UI (3 choices), XP bar UI", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c3-5", "title": "Terminal upgrades (world-space progress bar)", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c3-6", "title": "Passive ability framework (IPassiveAbility, PassiveAbilityBase, PassiveAbilityManager)", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c3-7", "title": "Creature-specific upgrade pools", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-4", "title": "Phase 9: Game loop", "collapsed": true, "tasks": [
-            { "id": "c4-1", "title": "Death & game over screen", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c4-2", "title": "Victory condition", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c4-3", "title": "Run summary — Claim→Confirm two-state flow, first-clear vs heat rewards", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c4-4", "title": "Restart / return to main menu, pause menu", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-5", "title": "Phase 10: Core UI & menus", "collapsed": true, "tasks": [
-            { "id": "c5-1", "title": "HUD — health, XP bar, wave counter, timer, kill count", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c5-2", "title": "Boss warning banner + boss health bar", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c5-3", "title": "Creature select screen", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c5-4", "title": "Main menu with animated creature display", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-6", "title": "Phase 11: Wave system rework", "collapsed": true, "tasks": [
-            { "id": "c6-1", "title": "Wave-based spawner replacing sinusoidal system", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c6-2", "title": "WaveDefinition with per-wave composition, mid-wave shifts, boss exact spawns", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c6-3", "title": "Spawn telegraphs, breathing controls, wave progress loading bar", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c6-4", "title": "Gate mechanic — proximity charge ring, Security Check flag", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c6-5", "title": "Arena bounds clamping, off-screen culling for boss spawns", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-7", "title": "Phase 12: Meta progression — backend", "collapsed": true, "tasks": [
-            { "id": "c7-1", "title": "SaveManager, CurrencyManager, CreatureInventory", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c7-2", "title": "CreatureData extended: evolution stages, innate ability, auto-evolution", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c7-3", "title": "BiomeData & BiomeRegistry ScriptableObjects", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c7-4", "title": "RunRewardCalculator, ResearchMachine gacha logic", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c7-5", "title": "GameSession — biome, heat tier, boss kills, reward finalization", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-8", "title": "Phase 13: Meta progression — UI & wiring", "collapsed": true, "tasks": [
-            { "id": "c8-1", "title": "Lab Hub scene, tab system (Home | Creatures, Inventory | Research)", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c8-2", "title": "Research Machine UI — DNA input, element preview, rarity roll, reveal", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c8-3", "title": "Creature Inventory UI, Creature Inspect panel, evolution bar", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c8-4", "title": "Run Summary with DNA rewards, currency counters in main menu", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-9", "title": "Phase 14: Ability system rework", "collapsed": true, "tasks": [
-            { "id": "c9-1", "title": "4 upgrade types: Innate, Stat Upgrade, Passive Ability, Active Ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c9-2", "title": "Slot system: 4 base slots, 5th at Evo3, consumesSlot checkbox", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c9-3", "title": "PassiveAbilityManager: slot tracker, SetEvolutionStage, innate activation", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c9-4", "title": "Level-up filter respects slot availability", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-10", "title": "Phase 15: Biome progression & world map", "collapsed": true, "tasks": [
-            { "id": "c10-1", "title": "WorldData, ChapterData with batch rewards & editor validators", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-2", "title": "LevelData extended: prerequisiteLevels, isOptional, storySeen, mapPositionOverride", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-3", "title": "ProgressionManager: IsUnlocked, IsCompleted, CompleteLevel, reward resolution", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-4", "title": "MapLayoutCalculator: DAG layout, vertical axis", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-5", "title": "WorldMapUI: vertical scroll, auto-scroll & auto-select furthest level", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-6", "title": "LevelNodeUI: code-generated nodes, states, heat dots, Select overlay", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-7", "title": "TabBar: OnActiveTabReselected for map collapse", "status": "done", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-8", "title": "MainMenuUI: LevelUI button opens map, creature display hides on map open", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c10-9", "title": "Runtime arena swapper, per-biome WaveDefinition sets, biome progression", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-11", "title": "Phase 16: Heat / difficulty system", "collapsed": false, "tasks": [
-            { "id": "c11-1", "title": "HeatConfig ScriptableObject — per-tier enemy stat multipliers (HP, damage, speed)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c11-2", "title": "Heat applied at run start via difficulty multiplier injected into enemy stats", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["c11-1"], "backlog": false, "notes": "" },
-            { "id": "c11-3", "title": "DNA reward multiplier scales with heat tier", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["c11-1"], "backlog": false, "notes": "" },
-            { "id": "c11-4", "title": "Heat selector UI on level map card", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["c11-1"], "backlog": false, "notes": "Levels unlock at Heat 0; higher tiers unlock after first clear" },
-            { "id": "c11-5", "title": "Heat stars shown on map node and run summary", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["c11-4"], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-12", "title": "Phase 17: Boss system", "collapsed": false, "tasks": [
-            { "id": "c12-1", "title": "BossData ScriptableObject — stats, attack patterns, phase thresholds", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c12-2", "title": "Boss phase system — behaviour changes at HP thresholds", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["c12-1"], "backlog": false, "notes": "" },
-            { "id": "c12-3", "title": "Boss intro sequence — telegraph, arena lock", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["c12-1"], "backlog": false, "notes": "" },
-            { "id": "c12-4", "title": "Boss death sequence — drop explosion, arena unlock", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["c12-1"], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-13", "title": "Phase 18: Power progression (Lab Upgrades)", "collapsed": false, "tasks": [
-            { "id": "c13-1", "title": "LabUpgradeData ScriptableObject — stat boost, max level, Bio-Credit cost curve", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c13-2", "title": "LabUpgradeManager — persistent purchase state, applies modifiers at run start", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["c13-1"], "backlog": false, "notes": "" },
-            { "id": "c13-3", "title": "Lab Upgrade tree UI in Lab Hub", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["c13-2"], "backlog": false, "notes": "" },
-            { "id": "c13-4", "title": "Integration with PlayerStats modifier system", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["c13-2"], "backlog": false, "notes": "" },
-            { "id": "c13-5", "title": "Categories: Vitality, Power, Agility, Magnetism, Fortune, Resilience, Precision", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["c13-1"], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-14", "title": "Phase 19: Reward system", "collapsed": false, "tasks": [
-            { "id": "c14-1", "title": "Mid-run reward events — milestone bonus drops (boss kill, wave streak)", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c14-2", "title": "Chest / loot container entities — in-run interactable rewards", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["c14-1"], "backlog": false, "notes": "" },
-            { "id": "c14-3", "title": "Reward rarity tiers — common/rare/epic with configurable drop tables", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["c14-1"], "backlog": false, "notes": "" },
-            { "id": "c14-4", "title": "End-of-run performance bonuses — speed, no-damage waves, etc.", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c14-5", "title": "Pity system for Research Machine — guaranteed rare after N common rolls", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-15", "title": "Phase 20: Polish", "collapsed": false, "tasks": [
-            { "id": "c15-1", "title": "Audio manager — SFX + music, volume controls", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c15-2", "title": "VFX & screen shake system", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c15-3", "title": "Ability visual polish — projectile sprites, melee swing, AoE pulses", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c15-4", "title": "Balance pass — difficulty, economy, DNA drop rates", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c15-5", "title": "Gate cinematic — camera lerp to gate after last wave", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "c15-6", "title": "Onboarding flow — new player starter creature pick", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "Without this new players have no creature and cannot start" }
-        ]},
-        { "id": "ph-code-bl", "title": "Code Backlog", "collapsed": true, "tasks": [
-            { "id": "cbl-1", "title": "Security Check overtime difficulty ramp + XP penalty", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "Hooks already in spawner" },
-            { "id": "cbl-2", "title": "Bomb mechanic — pickup, white-out flash, wave auto-complete", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-3", "title": "Special event pool with rarity tiers", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-4", "title": "Endless mode", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-5", "title": "Energy system (5 cap, ad/gem refills)", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-6", "title": "Missions / daily quests", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-7", "title": "Battle pass", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-8", "title": "Creature bond & affinity system", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-9", "title": "Story skip on heat reruns", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "storySeen flag written, reading it is backlog" },
-            { "id": "cbl-10", "title": "Security Check minigames (keycard, hacking)", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-11", "title": "Minimap", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cbl-12", "title": "Research simulation mini-game", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" }
-        ]}
+        {
+          "id": "ph-1",
+          "title": "Phases 1–6: Foundation",
+          "collapsed": false,
+          "tasks": [
+            {
+              "id": "c1-1",
+              "title": "Player movement — WASD, gamepad, mobile joystick",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c1-2",
+              "title": "Player health, damage, knockback, invincibility frames, elemental resistances",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c1-3",
+              "title": "Element system (ElementType, ElementModifier)",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c1-4",
+              "title": "Enemy ScriptableObject data, modular movement & attack behaviors",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c1-5",
+              "title": "Enemy attacks: melee, projectile, AoE with danger zones",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c1-6",
+              "title": "Loot drops, LootTable, magnetic XP/currency pickups",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-2",
+          "title": "Phase 7: Player combat & health UI",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c2-1",
+              "title": "CreatureData & AbilityData ScriptableObjects",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c2-2",
+              "title": "PlayerCombat auto-attack system",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c2-3",
+              "title": "Ability types: Projectile, Melee, AoE, Cone",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c2-4",
+              "title": "TargetFinder, AbilityRangeIndicator",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c2-5",
+              "title": "PlayerProjectile with element damage",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c2-6",
+              "title": "World-space health bar + floating damage numbers",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-3",
+          "title": "Phase 8: Progression, upgrades & passives",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c3-1",
+              "title": "XP system, leveling, PlayerStats with modifier stacking",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c3-2",
+              "title": "StatType, LevelingConfig, LevelUpHandler",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c3-3",
+              "title": "UpgradeData, UpgradePool, UpgradeRarity, RarityWeight",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c3-4",
+              "title": "Level-up panel UI (3 choices), XP bar UI",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c3-5",
+              "title": "Terminal upgrades (world-space progress bar)",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c3-6",
+              "title": "Passive ability framework (IPassiveAbility, PassiveAbilityBase, PassiveAbilityManager)",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c3-7",
+              "title": "Creature-specific upgrade pools",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-4",
+          "title": "Phase 9: Game loop",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c4-1",
+              "title": "Death & game over screen",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c4-2",
+              "title": "Victory condition",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c4-3",
+              "title": "Run summary — Claim→Confirm two-state flow, first-clear vs heat rewards",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c4-4",
+              "title": "Restart / return to main menu, pause menu",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-5",
+          "title": "Phase 10: Core UI & menus",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c5-1",
+              "title": "HUD — health, XP bar, wave counter, timer, kill count",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c5-2",
+              "title": "Boss warning banner + boss health bar",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c5-3",
+              "title": "Creature select screen",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c5-4",
+              "title": "Main menu with animated creature display",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-6",
+          "title": "Phase 11: Wave system rework",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c6-1",
+              "title": "Wave-based spawner replacing sinusoidal system",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c6-2",
+              "title": "WaveDefinition with per-wave composition, mid-wave shifts, boss exact spawns",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c6-3",
+              "title": "Spawn telegraphs, breathing controls, wave progress loading bar",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c6-4",
+              "title": "Gate mechanic — proximity charge ring, Security Check flag",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c6-5",
+              "title": "Arena bounds clamping, off-screen culling for boss spawns",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-7",
+          "title": "Phase 12: Meta progression — backend",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c7-1",
+              "title": "SaveManager, CurrencyManager, CreatureInventory",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c7-2",
+              "title": "CreatureData extended: evolution stages, innate ability, auto-evolution",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c7-3",
+              "title": "BiomeData & BiomeRegistry ScriptableObjects",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c7-4",
+              "title": "RunRewardCalculator, ResearchMachine gacha logic",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c7-5",
+              "title": "GameSession — biome, heat tier, boss kills, reward finalization",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-8",
+          "title": "Phase 13: Meta progression — UI & wiring",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c8-1",
+              "title": "Lab Hub scene, tab system (Home | Creatures, Inventory | Research)",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c8-2",
+              "title": "Research Machine UI — DNA input, element preview, rarity roll, reveal",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c8-3",
+              "title": "Creature Inventory UI, Creature Inspect panel, evolution bar",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c8-4",
+              "title": "Run Summary with DNA rewards, currency counters in main menu",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-9",
+          "title": "Phase 14: Ability system rework",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c9-1",
+              "title": "4 upgrade types: Innate, Stat Upgrade, Passive Ability, Active Ability",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c9-2",
+              "title": "Slot system: 4 base slots, 5th at Evo3, consumesSlot checkbox",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c9-3",
+              "title": "PassiveAbilityManager: slot tracker, SetEvolutionStage, innate activation",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c9-4",
+              "title": "Level-up filter respects slot availability",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-10",
+          "title": "Phase 15: Biome progression & world map",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c10-1",
+              "title": "WorldData, ChapterData with batch rewards & editor validators",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-2",
+              "title": "LevelData extended: prerequisiteLevels, isOptional, storySeen, mapPositionOverride",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-3",
+              "title": "ProgressionManager: IsUnlocked, IsCompleted, CompleteLevel, reward resolution",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-4",
+              "title": "MapLayoutCalculator: DAG layout, vertical axis",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-5",
+              "title": "WorldMapUI: vertical scroll, auto-scroll & auto-select furthest level",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-6",
+              "title": "LevelNodeUI: code-generated nodes, states, heat dots, Select overlay",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-7",
+              "title": "TabBar: OnActiveTabReselected for map collapse",
+              "status": "done",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-8",
+              "title": "MainMenuUI: LevelUI button opens map, creature display hides on map open",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c10-9",
+              "title": "Runtime arena swapper, per-biome WaveDefinition sets, biome progression",
+              "status": "done",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-11",
+          "title": "Phase 16: Heat / difficulty system",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c11-1",
+              "title": "HeatConfig ScriptableObject — per-tier enemy stat multipliers (HP, damage, speed)",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c11-2",
+              "title": "Heat applied at run start via difficulty multiplier injected into enemy stats",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [
+                "c11-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c11-3",
+              "title": "DNA reward multiplier scales with heat tier",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c11-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c11-4",
+              "title": "Heat selector UI on level map card",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [
+                "c11-1"
+              ],
+              "backlog": false,
+              "notes": "Levels unlock at Heat 0; higher tiers unlock after first clear"
+            },
+            {
+              "id": "c11-5",
+              "title": "Heat stars shown on map node and run summary",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c11-4"
+              ],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-12",
+          "title": "Phase 17: Boss system",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c12-1",
+              "title": "BossData ScriptableObject — stats, attack patterns, phase thresholds",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c12-2",
+              "title": "Boss phase system — behaviour changes at HP thresholds",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [
+                "c12-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c12-3",
+              "title": "Boss intro sequence — telegraph, arena lock",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c12-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c12-4",
+              "title": "Boss death sequence — drop explosion, arena unlock",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c12-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-13",
+          "title": "Phase 18: Power progression (Lab Upgrades)",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c13-1",
+              "title": "LabUpgradeData ScriptableObject — stat boost, max level, Bio-Credit cost curve",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c13-2",
+              "title": "LabUpgradeManager — persistent purchase state, applies modifiers at run start",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [
+                "c13-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c13-3",
+              "title": "Lab Upgrade tree UI in Lab Hub",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [
+                "c13-2"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c13-4",
+              "title": "Integration with PlayerStats modifier system",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [
+                "c13-2"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c13-5",
+              "title": "Categories: Vitality, Power, Agility, Magnetism, Fortune, Resilience, Precision",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c13-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-14",
+          "title": "Phase 19: Reward system",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c14-1",
+              "title": "Mid-run reward events — milestone bonus drops (boss kill, wave streak)",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c14-2",
+              "title": "Chest / loot container entities — in-run interactable rewards",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c14-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c14-3",
+              "title": "Reward rarity tiers — common/rare/epic with configurable drop tables",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [
+                "c14-1"
+              ],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c14-4",
+              "title": "End-of-run performance bonuses — speed, no-damage waves, etc.",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c14-5",
+              "title": "Pity system for Research Machine — guaranteed rare after N common rolls",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            }
+          ]
+        },
+        {
+          "id": "ph-15",
+          "title": "Phase 20: Polish",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "c15-1",
+              "title": "Audio manager — SFX + music, volume controls",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c15-2",
+              "title": "VFX & screen shake system",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c15-3",
+              "title": "Ability visual polish — projectile sprites, melee swing, AoE pulses",
+              "status": "todo",
+              "priority": "medium",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c15-4",
+              "title": "Balance pass — difficulty, economy, DNA drop rates",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c15-5",
+              "title": "Gate cinematic — camera lerp to gate after last wave",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": ""
+            },
+            {
+              "id": "c15-6",
+              "title": "Onboarding flow — new player starter creature pick",
+              "status": "todo",
+              "priority": "high",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": false,
+              "notes": "Without this new players have no creature and cannot start"
+            }
+          ]
+        },
+        {
+          "id": "ph-code-bl",
+          "title": "Code Backlog",
+          "collapsed": true,
+          "tasks": [
+            {
+              "id": "cbl-1",
+              "title": "Security Check overtime difficulty ramp + XP penalty",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": "Hooks already in spawner"
+            },
+            {
+              "id": "cbl-2",
+              "title": "Bomb mechanic — pickup, white-out flash, wave auto-complete",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-3",
+              "title": "Special event pool with rarity tiers",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-4",
+              "title": "Endless mode",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-5",
+              "title": "Energy system (5 cap, ad/gem refills)",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-6",
+              "title": "Missions / daily quests",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-7",
+              "title": "Battle pass",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-8",
+              "title": "Creature bond & affinity system",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-9",
+              "title": "Story skip on heat reruns",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": "storySeen flag written, reading it is backlog"
+            },
+            {
+              "id": "cbl-10",
+              "title": "Security Check minigames (keycard, hacking)",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-11",
+              "title": "Minimap",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            },
+            {
+              "id": "cbl-12",
+              "title": "Research simulation mini-game",
+              "status": "todo",
+              "priority": "low",
+              "assignee": null,
+              "blockedBy": [],
+              "backlog": true,
+              "notes": ""
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "cat-content", "name": "Content", "icon": "◇", "mode": "list",
+      "id": "cat-content",
+      "name": "Content",
+      "icon": "◇",
+      "mode": "list",
+      "phases": []
+    },
+    {
+      "id": "cat-ui",
+      "name": "UI",
+      "icon": "◻",
+      "mode": "list",
       "phases": [
-        { "id": "ph-cont-1", "title": "Fire Creature", "collapsed": true, "tasks": [
-            { "id": "cont-1-1", "title": "Fire Orbs passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-2", "title": "Nova passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-3", "title": "Flame Heart passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-4", "title": "Moving Attack passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-5", "title": "Firestarter passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-6", "title": "Multishot passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-7", "title": "Fire Geyser passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-8", "title": "Fire Trail passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-9", "title": "Burn DoT passive ability", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-10", "title": "Fire creature base stats & AbilityData config", "status": "done", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-11", "title": "Fire creature upgrade pool (stat upgrades + innate upgrades)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-1-12", "title": "Fire creature sprite & animations", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-cont-2", "title": "Water/Ice Creature", "collapsed": false, "tasks": [
-            { "id": "cont-2-1", "title": "Water creature base stats, AbilityData, CreatureData config", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-2-2", "title": "Water creature auto-attack (ability type + visual)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-2-1"], "backlog": false, "notes": "" },
-            { "id": "cont-2-3", "title": "Water creature innate ability design & implementation", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-2-1"], "backlog": false, "notes": "" },
-            { "id": "cont-2-4", "title": "Water creature passive ability set (6–9 abilities)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-2-1"], "backlog": false, "notes": "Focus on slow, evasion, and AoE freeze mechanics" },
-            { "id": "cont-2-5", "title": "Water creature upgrade pool", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["cont-2-4"], "backlog": false, "notes": "" },
-            { "id": "cont-2-6", "title": "Water creature sprite & animations", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-cont-3", "title": "Stone Creature", "collapsed": false, "tasks": [
-            { "id": "cont-3-1", "title": "Stone creature base stats, AbilityData, CreatureData config", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-3-2", "title": "Stone creature auto-attack (ability type + visual)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-3-1"], "backlog": false, "notes": "" },
-            { "id": "cont-3-3", "title": "Stone creature innate ability design & implementation", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-3-1"], "backlog": false, "notes": "" },
-            { "id": "cont-3-4", "title": "Stone creature passive ability set (6–9 abilities)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-3-1"], "backlog": false, "notes": "Focus on armor, knockback, and earth shatter mechanics" },
-            { "id": "cont-3-5", "title": "Stone creature upgrade pool", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": ["cont-3-4"], "backlog": false, "notes": "" },
-            { "id": "cont-3-6", "title": "Stone creature sprite & animations", "status": "todo", "priority": "medium", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-cont-4", "title": "Enemies", "collapsed": false, "tasks": [
-            { "id": "cont-4-1", "title": "Fire biome enemy set (3–5 types with unique behaviors)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-4-2", "title": "Water biome enemy set (3–5 types)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-4-3", "title": "Stone biome enemy set (3–5 types)", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-4-4", "title": "Fire biome boss — unique attack patterns and phase transitions", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["c12-2"], "backlog": false, "notes": "" },
-            { "id": "cont-4-5", "title": "Water biome boss", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-4-4"], "backlog": false, "notes": "" },
-            { "id": "cont-4-6", "title": "Stone biome boss", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-4-4"], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-cont-5", "title": "Levels & Biomes", "collapsed": false, "tasks": [
-            { "id": "cont-5-1", "title": "Fire biome level set — WaveDefinition configs for all fire levels", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-5-2", "title": "Water biome level set — WaveDefinition configs", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-5-3", "title": "Stone biome level set — WaveDefinition configs", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" },
-            { "id": "cont-5-4", "title": "WorldData / ChapterData setup for all three biomes", "status": "todo", "priority": "high", "assignee": null, "blockedBy": ["cont-5-1"], "backlog": false, "notes": "" },
-            { "id": "cont-5-5", "title": "Starter level (tutorial-lite) — guided wave sequence", "status": "todo", "priority": "high", "assignee": null, "blockedBy": [], "backlog": false, "notes": "" }
-        ]},
-        { "id": "ph-cont-6", "title": "Hybrid Creatures (Post-MVP)", "collapsed": false, "tasks": [
-            { "id": "cont-6-1", "title": "Lava creature concept — Fire + Stone hybrid", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cont-6-2", "title": "Steam creature concept — Fire + Water hybrid", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" },
-            { "id": "cont-6-3", "title": "Exotic creature DNA events & exclusive creature variants", "status": "todo", "priority": "low", "assignee": null, "blockedBy": [], "backlog": true, "notes": "" }
-        ]}
+        {
+          "id": "ph-ui-1",
+          "title": "UI Tasks",
+          "collapsed": false,
+          "tasks": []
+        }
       ]
     },
-    { "id": "cat-ui", "name": "UI", "icon": "◻", "mode": "list", "phases": [{ "id": "ph-ui-1", "title": "UI Tasks", "collapsed": false, "tasks": [] }] },
-    { "id": "cat-art", "name": "Art", "icon": "◈", "mode": "kanban", "phases": [] },
-    { "id": "cat-design", "name": "Design", "icon": "◉", "mode": "list", "phases": [{ "id": "ph-design-1", "title": "Design Tasks", "collapsed": false, "tasks": [] }] }
+    {
+      "id": "cat-art",
+      "name": "Art",
+      "icon": "◈",
+      "mode": "kanban",
+      "phases": []
+    },
+    {
+      "id": "cat-design",
+      "name": "Design",
+      "icon": "◉",
+      "mode": "list",
+      "phases": [
+        {
+          "id": "ph-design-1",
+          "title": "Design Tasks",
+          "collapsed": false,
+          "tasks": []
+        }
+      ]
+    }
   ]
 }
