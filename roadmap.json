@@ -1135,7 +1135,14 @@
       "name": "Art",
       "icon": "◈",
       "mode": "list",
-      "phases": []
+      "phases": [
+        {
+          "id": "id-1776350421272-v3m7",
+          "title": "aaaa",
+          "collapsed": false,
+          "tasks": []
+        }
+      ]
     },
     {
       "id": "cat-design",
