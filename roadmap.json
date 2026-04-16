@@ -156,7 +156,7 @@
         {
           "id": "ph-3",
           "title": "Phase 8: Progression, upgrades & passives",
-          "collapsed": true,
+          "collapsed": false,
           "tasks": [
             {
               "id": "c3-1",
