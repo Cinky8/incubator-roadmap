@@ -655,7 +655,7 @@
               "title": "Heat applied at run start via difficulty multiplier injected into enemy stats",
               "status": "todo",
               "priority": "high",
-              "assignee": null,
+              "assignee": "t1",
               "blockedBy": [
                 "c11-1"
               ],
