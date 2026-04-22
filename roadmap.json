@@ -1113,18 +1113,7 @@
           "id": "id-1776350421272-v3m7",
           "title": "aaaa",
           "collapsed": false,
-          "tasks": [
-            {
-              "id": "id-1776350426901-ys9l",
-              "title": "ssss",
-              "status": "todo",
-              "priority": "medium",
-              "assignee": "t1",
-              "blockedBy": [],
-              "backlog": false,
-              "notes": ""
-            }
-          ]
+          "tasks": []
         },
         {
           "id": "id-1776350424640-ie48",
