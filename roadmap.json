@@ -1082,33 +1082,6 @@
       "mode": "list",
       "phases": [
         {
-          "id": "id-1776350375344-hcvc",
-          "title": "aaa",
-          "collapsed": false,
-          "tasks": [
-            {
-              "id": "id-1776350388163-xwau",
-              "title": "aaaa",
-              "status": "todo",
-              "priority": "medium",
-              "assignee": "t1",
-              "blockedBy": [],
-              "backlog": false,
-              "notes": ""
-            },
-            {
-              "id": "id-1776350392656-7g5s",
-              "title": "aaaa",
-              "status": "todo",
-              "priority": "medium",
-              "assignee": "t1",
-              "blockedBy": [],
-              "backlog": false,
-              "notes": ""
-            }
-          ]
-        },
-        {
           "id": "id-1776350381059-zp22",
           "title": "aaaa",
           "collapsed": false,
