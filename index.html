@@ -208,6 +208,71 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ── Docs ── */
+.docs-wrap{max-width:980px;margin:0 auto;padding:24px 20px 60px}
+.docs-hero{background:linear-gradient(135deg,#1a2040 0%,var(--bg2) 70%);border:1px solid var(--border2);border-radius:var(--radius);padding:28px 32px;margin-bottom:28px}
+.docs-hero h1{font-size:22px;font-weight:800;color:#fff}
+.docs-hero p{color:var(--text2);margin-top:6px;font-size:13px;max-width:580px}
+.docs-hero-pills{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.docs-pill{padding:3px 10px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid}
+
+.docs-section-heading{display:flex;align-items:center;gap:10px;margin:36px 0 16px}
+.docs-section-icon{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.docs-section-heading h2{font-size:16px;font-weight:700;color:#fff}
+.docs-section-heading p{font-size:12px;color:var(--text2);margin-top:1px}
+
+.doc-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:16px;overflow:hidden}
+.doc-card-header{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);background:var(--bg3)}
+.doc-card-icon{width:28px;height:28px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:1px}
+.doc-card-title{font-weight:700;font-size:14px;color:#fff}
+.doc-card-path{font-size:10px;color:var(--text3);font-family:monospace;margin-top:2px}
+.doc-card-desc{font-size:12px;color:var(--text2);margin-top:3px}
+.doc-so-badge{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;vertical-align:middle;margin-left:6px;background:rgba(99,102,241,.15);color:var(--accent2);border:1px solid rgba(99,102,241,.3)}
+
+.doc-var-group{padding:12px 16px;border-bottom:1px solid var(--border)}
+.doc-var-group:last-child{border-bottom:none}
+.doc-group-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:8px}
+.doc-var{display:grid;grid-template-columns:180px 70px 1fr;gap:8px 12px;padding:6px 8px;border-radius:5px;align-items:start}
+.doc-var:hover{background:rgba(255,255,255,.025)}
+.doc-var-name{font-family:monospace;font-size:12px;color:#22d3ee;font-weight:600;word-break:break-all}
+.doc-var-type{font-family:monospace;font-size:11px;color:var(--accent2);padding-top:1px}
+.doc-var-desc{font-size:12px;color:var(--text)}
+.doc-range{display:inline-block;background:var(--bg4);border:1px solid var(--border2);border-radius:3px;padding:1px 5px;font-family:monospace;font-size:10px;color:var(--yellow);margin-left:5px;white-space:nowrap}
+
+.doc-callout{display:flex;gap:10px;padding:10px 14px;border-radius:5px;margin:10px 16px 2px;font-size:12px}
+.doc-callout-info{background:rgba(59,130,246,.08);border-left:3px solid var(--blue);color:#93c5fd}
+.doc-callout-tip{background:rgba(34,197,94,.08);border-left:3px solid var(--green);color:#86efac}
+.doc-callout-warn{background:rgba(234,179,8,.08);border-left:3px solid var(--yellow);color:#fde68a}
+.doc-callout-icon{font-size:14px;flex-shrink:0;padding-top:1px}
+
+.doc-formula{background:#0d1020;border:1px solid var(--border);border-radius:5px;padding:10px 14px;margin:10px 16px;font-family:monospace;font-size:12px;color:var(--green)}
+.doc-formula span{color:var(--text3);font-family:sans-serif;font-size:11px;display:block;margin-bottom:3px}
+
+.doc-enum-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px;padding:10px 16px}
+.doc-enum-item{background:var(--bg4);border:1px solid var(--border);border-radius:5px;padding:7px 10px}
+.doc-enum-name{font-family:monospace;font-size:11px;color:#22d3ee;font-weight:600}
+.doc-enum-desc{font-size:11px;color:var(--text3);margin-top:2px}
+
+.doc-stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px;padding:12px 16px}
+.doc-stat-item{background:var(--bg4);border:1px solid var(--border);border-radius:5px;padding:9px 11px}
+.doc-stat-name{font-family:monospace;font-size:11px;color:var(--accent2);font-weight:700}
+.doc-stat-desc{font-size:11px;color:var(--text3);margin-top:3px}
+
+.doc-sidebar-nav{position:sticky;top:136px;max-height:calc(100vh - 160px);overflow-y:auto;width:200px;flex-shrink:0;padding-right:8px}
+.doc-sidebar-nav a{display:block;padding:3px 8px;color:var(--text3);text-decoration:none;font-size:12px;border-left:2px solid transparent;border-radius:0 3px 3px 0;transition:all .12s}
+.doc-sidebar-nav a:hover{color:var(--text2);border-left-color:var(--border2);background:var(--bg2)}
+.doc-sidebar-section{padding:8px 8px 2px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text3)}
+.docs-layout{display:flex;gap:24px;align-items:flex-start}
+.docs-main{flex:1;min-width:0}
+
+@media(max-width:760px){
+  .doc-var{grid-template-columns:1fr 60px}
+  .doc-var-type{grid-row:1;grid-column:2}
+  .doc-var-desc{grid-column:1/-1}
+  .doc-sidebar-nav{display:none}
+  .docs-layout{display:block}
+}
 </style>
 </head>
 <body>
@@ -377,6 +442,7 @@ function render() {
 
   if (activeTab === 'team') { hideSubtab(); renderTeam(); return; }
   if (activeTab === 'mytasks') { hideSubtab(); renderMyTasks(); return; }
+  if (activeTab === 'docs') { hideSubtab(); renderDocs(); return; }
 
   const cat = data.categories.find(c => c.id === activeTab);
   if (!cat) return;
@@ -411,6 +477,7 @@ function renderTabbar() {
     data.categories.map(c => `<div class="tab ${activeTab===c.id?'active':''}" onclick="switchTab('${c.id}')">${c.icon||'◇'} ${c.name}</div>`).join('') +
     `<div class="tab ${activeTab==='mytasks'?'active':''}" onclick="switchTab('mytasks')">★ My Tasks</div>` +
     `<div class="tab ${activeTab==='team'?'active':''}" onclick="switchTab('team')">👥 Team</div>` +
+    `<div class="tab ${activeTab==='docs'?'active':''}" onclick="switchTab('docs')">📚 Docs</div>` +
     `<div class="tab-add" onclick="addCategory()" title="Add category">+</div>`;
 }
 
@@ -932,7 +999,902 @@ function saveSettings(){
 }
 function clearLocalData(){if(!confirm('Clear local data and reload?'))return;localStorage.removeItem('roadmap_data');location.reload();}
 
+// ── Docs ─────────────────────────────────────────────────────────────────────
+function renderDocs() {
+  const el = document.getElementById('content');
+  el.className = 'content';
+  el.innerHTML = document.getElementById('docs-template').innerHTML;
+}
+
 init();
 </script>
+
+<!-- ═══════════════════ DOCS TEMPLATE ═══════════════════ -->
+<template id="docs-template">
+<div class="docs-wrap">
+
+<!-- Hero -->
+<div class="docs-hero">
+  <h1>Designer Reference</h1>
+  <p>Every serialized variable across all player, enemy, stats, ability, upgrade, leveling and health scripts — with tuning ranges and how systems connect.</p>
+  <div class="docs-hero-pills">
+    <span class="docs-pill" style="color:#4ade80;border-color:#2d4a24;background:#1a2d1a;">Player</span>
+    <span class="docs-pill" style="color:#6c8cff;border-color:#243060;background:#1a1f2d;">Leveling &amp; XP</span>
+    <span class="docs-pill" style="color:#a78bfa;border-color:#421a4a;background:#2a1a2d;">Upgrades</span>
+    <span class="docs-pill" style="color:#22d3ee;border-color:#1a3a4a;background:#1a2d35;">Abilities</span>
+    <span class="docs-pill" style="color:#f87171;border-color:#4a2424;background:#2d1a1a;">Enemy</span>
+  </div>
+</div>
+
+<div class="docs-layout">
+
+<!-- Sidebar nav -->
+<nav class="doc-sidebar-nav">
+  <div class="doc-sidebar-section">Player</div>
+  <a href="#d-creaturedata">Creature Data</a>
+  <a href="#d-playerstats">Player Stats</a>
+  <a href="#d-playerhealth">Player Health</a>
+  <a href="#d-playermovement">Movement</a>
+  <a href="#d-playercombat">Combat</a>
+  <div class="doc-sidebar-section">Leveling</div>
+  <a href="#d-levelingconfig">Leveling Config</a>
+  <a href="#d-xpsystem">XP System</a>
+  <div class="doc-sidebar-section">Upgrades</div>
+  <a href="#d-upgradepool">Upgrade Pool</a>
+  <a href="#d-upgradedata">Upgrade Data</a>
+  <a href="#d-upgrademanager">Upgrade Manager</a>
+  <a href="#d-leveluphandler">Level-Up Handler</a>
+  <div class="doc-sidebar-section">Abilities</div>
+  <a href="#d-abilitydata">Base Ability Data</a>
+  <a href="#d-passivedata">Passive Ability Data</a>
+  <a href="#d-passivemanager">Passive Manager</a>
+  <a href="#d-specialdata">Special Ability Data</a>
+  <a href="#d-specialmanager">Special Manager</a>
+  <div class="doc-sidebar-section">Passive — AoE</div>
+  <a href="#d-orb">Orb</a>
+  <a href="#d-firetrail">Fire Trail</a>
+  <a href="#d-meteor">Meteor</a>
+  <a href="#d-nova">Nova</a>
+  <a href="#d-snowball">Snowball</a>
+  <a href="#d-damagearea">Damage Area</a>
+  <a href="#d-aura">Aura</a>
+  <div class="doc-sidebar-section">Passive — Projectile</div>
+  <a href="#d-missile">Missile</a>
+  <a href="#d-piercing">Piercing</a>
+  <a href="#d-boulder">Boulder</a>
+  <a href="#d-brick">Brick</a>
+  <a href="#d-spray">Spray</a>
+  <a href="#d-ray">Ray</a>
+  <div class="doc-sidebar-section">Passive — Buff</div>
+  <a href="#d-multishot">Multishot</a>
+  <a href="#d-movingattack">Moving Attack</a>
+  <a href="#d-burst">Burst</a>
+  <a href="#d-flameheart">Flame Heart</a>
+  <a href="#d-thresholdbuff">Threshold Buff</a>
+  <a href="#d-standingbuff">Standing Buff</a>
+  <div class="doc-sidebar-section">Special (Q)</div>
+  <a href="#d-rolling">Rolling</a>
+  <a href="#d-permafrost">Permafrost</a>
+  <a href="#d-revive">Revive</a>
+  <div class="doc-sidebar-section">Reference</div>
+  <a href="#d-stattypes">All Stat Types</a>
+  <a href="#d-enums">All Enums</a>
+</nav>
+
+<div class="docs-main">
+
+<!-- ══════════ PLAYER ══════════ -->
+<div class="docs-section-heading" id="d-player">
+  <div class="docs-section-icon" style="background:#1a2d1a;">🧬</div>
+  <div><h2>Player Systems</h2><p>Core data, stats, health, movement and combat</p></div>
+</div>
+
+<!-- Creature Data -->
+<div class="doc-card" id="d-creaturedata">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a2535;">📋</div>
+    <div>
+      <div class="doc-card-title">CreatureData<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/1_Data/CreatureData.cs</div>
+      <div class="doc-card-desc">Master data asset for a playable creature. Create one per creature and assign to the player prefab.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Identity</div>
+    <div class="doc-var"><span class="doc-var-name">creatureId</span><span class="doc-var-type">string</span><span class="doc-var-desc">Unique slug used by save/load. Never change after shipping — e.g. "slime_01".</span></div>
+    <div class="doc-var"><span class="doc-var-name">creatureName</span><span class="doc-var-type">string</span><span class="doc-var-desc">Display name shown in menus and the upgrade panel.</span></div>
+    <div class="doc-var"><span class="doc-var-name">description</span><span class="doc-var-type">string</span><span class="doc-var-desc">Flavour text or playstyle hint shown on the character select screen.</span></div>
+    <div class="doc-var"><span class="doc-var-name">rarity</span><span class="doc-var-type">CreatureRarity</span><span class="doc-var-desc">Controls card border colour, pip colour and sort order in the roster.</span></div>
+    <div class="doc-var"><span class="doc-var-name">elements</span><span class="doc-var-type">List&lt;CreatureElementData&gt;</span><span class="doc-var-desc">Elemental affinities — determines default damage types and resistances.</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Base Stats — Offensive</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">float</span><span class="doc-var-desc">Base flat damage for the auto-attack.<span class="doc-range">8–30</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">abilityDamage</span><span class="doc-var-type">float</span><span class="doc-var-desc">Base flat damage for passive and special abilities — scale separately from damage to tune auto-attack vs ability focus.<span class="doc-range">5–25</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">attackSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Attack speed multiplier. 1.0 = normal. Above 1 = faster, below 1 = slower.<span class="doc-range">0.7–1.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">critChance</span><span class="doc-var-type">float</span><span class="doc-var-desc">Base crit probability (0–1). 0.05 = 5% crit.<span class="doc-range">0.0–0.15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">critDamage</span><span class="doc-var-type">float</span><span class="doc-var-desc">Crit damage multiplier. 1.5 = 150% damage on a crit.<span class="doc-range">1.5–2.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">range</span><span class="doc-var-type">float</span><span class="doc-var-desc">Base targeting range in Unity units.<span class="doc-range">3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">knockback</span><span class="doc-var-type">float</span><span class="doc-var-desc">Knockback force applied to enemies hit by the auto-attack.<span class="doc-range">0–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">lifesteal</span><span class="doc-var-type">float</span><span class="doc-var-desc">Fraction of damage dealt restored as HP. 0.1 = 10% lifesteal.<span class="doc-range">0.0–0.2</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Base Stats — Defensive</div>
+    <div class="doc-var"><span class="doc-var-name">maxHealth</span><span class="doc-var-type">int</span><span class="doc-var-desc">Starting maximum HP.<span class="doc-range">80–200</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">regeneration</span><span class="doc-var-type">float</span><span class="doc-var-desc">HP recovered per regen tick. 0 = no regen.<span class="doc-range">0–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">armor</span><span class="doc-var-type">float</span><span class="doc-var-desc">Flat damage reduction before incoming damage is applied.<span class="doc-range">0–10</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">dodge</span><span class="doc-var-type">float</span><span class="doc-var-desc">Probability (0–1) to fully evade a hit.<span class="doc-range">0.0–0.15</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Base Stats — Utility</div>
+    <div class="doc-var"><span class="doc-var-name">moveSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Movement speed in Unity units/second.<span class="doc-range">3–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">pickupRange</span><span class="doc-var-type">float</span><span class="doc-var-desc">Radius for auto-collecting XP orbs.<span class="doc-range">1.5–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">luck</span><span class="doc-var-type">float</span><span class="doc-var-desc">Shifts upgrade rarity weights toward higher tiers. Higher = rarer options appear more.<span class="doc-range">0.0–1.0</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">xpGain</span><span class="doc-var-type">float</span><span class="doc-var-desc">XP multiplier. 1.2 = 20% bonus XP.<span class="doc-range">0.8–1.5</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Abilities &amp; Slots</div>
+    <div class="doc-var"><span class="doc-var-name">baseAbility</span><span class="doc-var-type">AbilityData</span><span class="doc-var-desc">The creature's auto-attack. Fires based on attackSpeed and targeting range.</span></div>
+    <div class="doc-var"><span class="doc-var-name">innateAbility</span><span class="doc-var-type">PassiveAbilityData</span><span class="doc-var-desc">Always-on passive that activates free at run start — no slot cost.</span></div>
+    <div class="doc-var"><span class="doc-var-name">specialAbility</span><span class="doc-var-type">SpecialAbilityData</span><span class="doc-var-desc">Default Q-slot ability offered first in upgrade picks.</span></div>
+    <div class="doc-var"><span class="doc-var-name">baseAbilitySlots</span><span class="doc-var-type">int</span><span class="doc-var-desc">Passive ability slots at Evolution Stage 1.<span class="doc-range">2–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">stage2BonusSlots</span><span class="doc-var-type">int</span><span class="doc-var-desc">Extra slots added on Evolution Stage 2.</span></div>
+    <div class="doc-var"><span class="doc-var-name">stage3BonusSlots</span><span class="doc-var-type">int</span><span class="doc-var-desc">Extra slots added on Evolution Stage 3.</span></div>
+    <div class="doc-var"><span class="doc-var-name">upgradePool</span><span class="doc-var-type">UpgradePool</span><span class="doc-var-desc">Upgrades and abilities this creature can be offered. Falls back to default pool if empty.</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Passives by Evolution Stage</div>
+    <div class="doc-var"><span class="doc-var-name">creaturePassives</span><span class="doc-var-type">List&lt;PassiveAbilityData&gt;</span><span class="doc-var-desc">Always-on passives active at Stage 1, no slot cost.</span></div>
+    <div class="doc-var"><span class="doc-var-name">stage2Passives</span><span class="doc-var-type">List&lt;PassiveAbilityData&gt;</span><span class="doc-var-desc">Additional passives that activate on Stage 2 evolution.</span></div>
+    <div class="doc-var"><span class="doc-var-name">stage3Passives</span><span class="doc-var-type">List&lt;PassiveAbilityData&gt;</span><span class="doc-var-desc">Additional passives that activate on Stage 3 evolution.</span></div>
+  </div>
+</div>
+
+<!-- Player Health -->
+<div class="doc-card" id="d-playerhealth">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2d1a1a;">❤️</div>
+    <div>
+      <div class="doc-card-title">PlayerHealth</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/2_Health/PlayerHealth.cs</div>
+      <div class="doc-card-desc">Manages HP, invincibility frames, health regen, elemental modifiers, and death/revival.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Core</div>
+    <div class="doc-var"><span class="doc-var-name">baseMaxHealth</span><span class="doc-var-type">int</span><span class="doc-var-desc">Starting max HP. Pulled from CreatureData automatically — only override manually on the prefab if needed.<span class="doc-range">80–200</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">invincibilityDuration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds of invincibility after taking a hit. Prevents instant burst death from overlapping hits.<span class="doc-range">0.3–1.0</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">regenTickInterval</span><span class="doc-var-type">float</span><span class="doc-var-desc">How often (seconds) the Regeneration stat heals the player.<span class="doc-range">1.0–3.0</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Elemental Modifiers</div>
+    <div class="doc-var"><span class="doc-var-name">vulnerabilities</span><span class="doc-var-type">List&lt;ElementModifier&gt;</span><span class="doc-var-desc">Elements the player takes bonus damage from. Multiplier &gt;1 = more damage (2.0 = double).</span></div>
+    <div class="doc-var"><span class="doc-var-name">resistances</span><span class="doc-var-type">List&lt;ElementModifier&gt;</span><span class="doc-var-desc">Elements the player takes less damage from. 0.5 = half damage. Stacks multiplicatively with vulnerabilities.</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Hit Feedback</div>
+    <div class="doc-var"><span class="doc-var-name">flashColor</span><span class="doc-var-type">Color</span><span class="doc-var-desc">Sprite colour during the hit flash on invincibility frames.</span></div>
+    <div class="doc-var"><span class="doc-var-name">flashInterval</span><span class="doc-var-type">float</span><span class="doc-var-desc">Duration of each colour flash cycle during invincibility.<span class="doc-range">0.05–0.15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">playHitAnimation</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Whether the animator plays a hit-reaction clip on damage.</span></div>
+    <div class="doc-var"><span class="doc-var-name">playDeathAnimation</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Whether the animator plays a death clip before the death sequence. If false, object is hidden immediately.</span></div>
+  </div>
+</div>
+
+<!-- Player Stats note -->
+<div class="doc-card" id="d-playerstats">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#251a35;">📊</div>
+    <div>
+      <div class="doc-card-title">PlayerStats<span class="doc-so-badge">Singleton</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/2_Stats/PlayerStats.cs</div>
+      <div class="doc-card-desc">Central stat registry. No designer-facing fields — driven by CreatureData and upgrade modifiers.</div>
+    </div>
+  </div>
+  <div class="doc-callout doc-callout-info"><span class="doc-callout-icon">ℹ️</span><span>Tune stats via <strong>CreatureData</strong> base values and <strong>UpgradeData</strong> modifiers, not this script.</span></div>
+  <div class="doc-formula"><span>Final stat value:</span>finalValue = (baseStat + ΣflatModifiers) × (1 + ΣpercentModifiers)</div>
+  <div class="doc-callout doc-callout-tip" style="margin-bottom:10px"><span class="doc-callout-icon">💡</span><span>Example: base Damage 10, flat +5 upgrade, 20% upgrade → (10+5) × 1.20 = <strong>18 damage</strong>. Percent bonuses stack additively, not multiplicatively.</span></div>
+</div>
+
+<!-- Movement -->
+<div class="doc-card" id="d-playermovement">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a2535;">🏃</div>
+    <div>
+      <div class="doc-card-title">PlayerMovement</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/2_Movement/PlayerMovement.cs</div>
+      <div class="doc-card-desc">Reads input and applies velocity. Actual speed comes from PlayerStats.MoveSpeed at runtime.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Settings</div>
+    <div class="doc-var"><span class="doc-var-name">baseMoveSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Fallback speed used only when PlayerStats is unavailable (editor testing). Tune via CreatureData.moveSpeed instead.<span class="doc-range">4.0</span></span></div>
+  </div>
+</div>
+
+<!-- Combat -->
+<div class="doc-card" id="d-playercombat">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2d1a1a;">⚔️</div>
+    <div>
+      <div class="doc-card-title">PlayerCombat</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_BaseAttack/PlayerCombat.cs</div>
+      <div class="doc-card-desc">Drives the auto-attack. Picks a target, checks cooldown and range, executes the base ability.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Settings</div>
+    <div class="doc-var"><span class="doc-var-name">stationaryThreshold</span><span class="doc-var-type">float</span><span class="doc-var-desc">Velocity below which the player counts as stationary. Abilities with requiresStationary=true only fire below this.<span class="doc-range">0.05–0.2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">stationaryDelay</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds the player must be still before the stationary flag triggers. Prevents flicker on controller stick nudges.<span class="doc-range">0.05–0.2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">showRangeGizmos</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Draws the attack range circle in the Scene view. Useful for tuning AbilityData.targetingRange.</span></div>
+  </div>
+</div>
+
+<!-- ══════════ LEVELING ══════════ -->
+<div class="docs-section-heading" id="d-leveling">
+  <div class="docs-section-icon" style="background:#2a1a35;">⬆️</div>
+  <div><h2>Leveling &amp; XP</h2><p>XP curve and level-up frequency</p></div>
+</div>
+
+<div class="doc-card" id="d-levelingconfig">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2a1a35;">📈</div>
+    <div>
+      <div class="doc-card-title">LevelingConfig<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/_Base/LevelingConfig.cs</div>
+      <div class="doc-card-desc">Single asset controlling the entire XP curve. Tweak here to change how fast the player levels.</div>
+    </div>
+  </div>
+  <div class="doc-formula"><span>XP to next level:</span>xpToNextLevel = baseXP × (1 + currentLevel × growthRate) ^ exponent</div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Curve Settings</div>
+    <div class="doc-var"><span class="doc-var-name">baseXP</span><span class="doc-var-type">int</span><span class="doc-var-desc">XP to reach Level 2. All levels scale from this. Raise to slow the whole curve, lower for faster early game.<span class="doc-range">30–100</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">growthRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">XP cost increase per level. 0.1 = 10% more each level. Raise to widen early vs late gap.<span class="doc-range">0.01–0.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">exponent</span><span class="doc-var-type">float</span><span class="doc-var-desc">Curve steepness. 1.0 = linear, 2.0 = quadratic (steep late-game wall).<span class="doc-range">1.0–3.0</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">upgradeChoices</span><span class="doc-var-type">int</span><span class="doc-var-desc">How many upgrade options appear per level-up.<span class="doc-range">2–5</span></span></div>
+  </div>
+  <div class="doc-callout doc-callout-tip" style="margin-bottom:10px"><span class="doc-callout-icon">💡</span><span><strong>Faster early / same late:</strong> lower baseXP, keep exponent. &nbsp;<strong>Flatter overall:</strong> lower exponent toward 1.0. &nbsp;<strong>Longer run:</strong> raise baseXP, lower growthRate.</span></div>
+</div>
+
+<div class="doc-card" id="d-xpsystem">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1f2535;">✨</div>
+    <div>
+      <div class="doc-card-title">XPSystem</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/_Base/XPSystem.cs</div>
+      <div class="doc-card-desc">Runtime XP tracker. Accumulates XP from orb pickups and fires OnLevelUp when a threshold is reached.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Settings</div>
+    <div class="doc-var"><span class="doc-var-name">config</span><span class="doc-var-type">LevelingConfig</span><span class="doc-var-desc">Assign the LevelingConfig asset here.</span></div>
+  </div>
+  <div class="doc-callout doc-callout-info" style="margin-bottom:10px"><span class="doc-callout-icon">ℹ️</span><span>currentLevel, currentXP, xpToNextLevel in the Inspector are read-only displays — do not set manually.</span></div>
+</div>
+
+<!-- ══════════ UPGRADES ══════════ -->
+<div class="docs-section-heading" id="d-upgrades">
+  <div class="docs-section-icon" style="background:#2a1a1a;">🎲</div>
+  <div><h2>Upgrade System</h2><p>Pools, stat upgrades, rolling, and the level-up panel</p></div>
+</div>
+
+<div class="doc-card" id="d-upgradepool">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2a1a1a;">🪣</div>
+    <div>
+      <div class="doc-card-title">UpgradePool<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/_Base/UpgradePool.cs</div>
+      <div class="doc-card-desc">A curated list of upgrades and abilities a creature can be offered. Assign one to each CreatureData.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Contents</div>
+    <div class="doc-var"><span class="doc-var-name">upgrades</span><span class="doc-var-type">List&lt;UpgradeData&gt;</span><span class="doc-var-desc">Stat-boost upgrade cards available from this pool.</span></div>
+    <div class="doc-var"><span class="doc-var-name">passiveAbilities</span><span class="doc-var-type">List&lt;PassiveAbilityData&gt;</span><span class="doc-var-desc">Passive ability upgrades. Each occupies a slot when selected.</span></div>
+    <div class="doc-var"><span class="doc-var-name">specialAbilities</span><span class="doc-var-type">List&lt;SpecialAbilityData&gt;</span><span class="doc-var-desc">Q-slot ability upgrades available from this pool.</span></div>
+    <div class="doc-var"><span class="doc-var-name">rarityWeights</span><span class="doc-var-type">List&lt;RarityWeight&gt;</span><span class="doc-var-desc">Base probability weights per rarity tier. Higher weight relative to others = appears more often. E.g. Common 60, Uncommon 30, Rare 8, Epic 2.</span></div>
+    <div class="doc-var"><span class="doc-var-name">luckScaling</span><span class="doc-var-type">float</span><span class="doc-var-desc">How much each point of Luck shifts weights toward rarer tiers.<span class="doc-range">0.0–0.1</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-upgradedata">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a251a;">⬡</div>
+    <div>
+      <div class="doc-card-title">UpgradeData<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/StatUpgrades/UpgradeData.cs</div>
+      <div class="doc-card-desc">A single stat-boost upgrade card. Create one asset per upgrade and add to an UpgradePool.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Identity</div>
+    <div class="doc-var"><span class="doc-var-name">upgradeName</span><span class="doc-var-type">string</span><span class="doc-var-desc">Name shown on the upgrade card.</span></div>
+    <div class="doc-var"><span class="doc-var-name">description</span><span class="doc-var-type">string</span><span class="doc-var-desc">Tooltip text. Supports {value} placeholders replaced with actual per-level value at runtime.</span></div>
+    <div class="doc-var"><span class="doc-var-name">rarity</span><span class="doc-var-type">UpgradeRarity</span><span class="doc-var-desc">Controls card colour and roll probability.</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Stacking &amp; Restrictions</div>
+    <div class="doc-var"><span class="doc-var-name">isStackable</span><span class="doc-var-type">bool</span><span class="doc-var-desc">If true, can be offered multiple times (up to maxLevel). If false, disappears from pool after one pick.</span></div>
+    <div class="doc-var"><span class="doc-var-name">maxLevel</span><span class="doc-var-type">int</span><span class="doc-var-desc">Max times this upgrade can stack.<span class="doc-range">1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">consumesSlot</span><span class="doc-var-type">bool</span><span class="doc-var-desc">If true, selecting this uses a passive ability slot — use for powerful stat upgrades that should compete with passives.</span></div>
+    <div class="doc-var"><span class="doc-var-name">restrictedToCreatures</span><span class="doc-var-type">List&lt;CreatureData&gt;</span><span class="doc-var-desc">If populated, only appears for listed creatures. Empty = available for all.</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Effect</div>
+    <div class="doc-var"><span class="doc-var-name">statToModify</span><span class="doc-var-type">StatType</span><span class="doc-var-desc">Which of the 16 stats this upgrade affects. See Stat Types reference.</span></div>
+    <div class="doc-var"><span class="doc-var-name">isPercentage</span><span class="doc-var-type">bool</span><span class="doc-var-desc">If true, value is a percent modifier (0.20 = +20%). If false, flat additive bonus (5 = +5 flat).</span></div>
+    <div class="doc-var"><span class="doc-var-name">valuePerLevel</span><span class="doc-var-type">float</span><span class="doc-var-desc">Uniform bonus per stack. Ignored if perLevelValues is populated.</span></div>
+    <div class="doc-var"><span class="doc-var-name">perLevelValues</span><span class="doc-var-type">List&lt;float&gt;</span><span class="doc-var-desc">Per-stack overrides. Index 0 = first pick. Use for diminishing returns e.g. 10, 8, 6, 4, 2.</span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-upgrademanager">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a1f2d;">🗂️</div>
+    <div>
+      <div class="doc-card-title">UpgradeManager</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/_Base/UpgradeManager.cs</div>
+      <div class="doc-card-desc">Runtime coordinator. Owns roll logic and routes selections to stat/passive/special sub-systems.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Settings</div>
+    <div class="doc-var"><span class="doc-var-name">defaultUpgradePool</span><span class="doc-var-type">UpgradePool</span><span class="doc-var-desc">Fallback pool when the active creature has no pool assigned.</span></div>
+    <div class="doc-var"><span class="doc-var-name">choicesPerLevelUp</span><span class="doc-var-type">int</span><span class="doc-var-desc">Options per level-up. Overridden by LevelingConfig.upgradeChoices — this is the local fallback.<span class="doc-range">3</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-leveluphandler">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1f2a1a;">🎁</div>
+    <div>
+      <div class="doc-card-title">LevelUpHandler</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/_Base/LevelUpHandler.cs</div>
+      <div class="doc-card-desc">Bridges XP system and UI. Pauses game, rolls options, and signals the panel to open.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Settings</div>
+    <div class="doc-var"><span class="doc-var-name">pauseGameOnLevelUp</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Sets Time.timeScale=0 while upgrade panel is open. Disable for a mode where enemies keep moving during picks.</span></div>
+  </div>
+</div>
+
+<!-- ══════════ ABILITIES ══════════ -->
+<div class="docs-section-heading" id="d-abilities">
+  <div class="docs-section-icon" style="background:#1a1f35;">🌀</div>
+  <div><h2>Ability Data</h2><p>Base attack, passive, and special ability ScriptableObjects</p></div>
+</div>
+
+<div class="doc-card" id="d-abilitydata">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a1f35;">🎯</div>
+    <div>
+      <div class="doc-card-title">AbilityData<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/Abilities/AbilityData.cs</div>
+      <div class="doc-card-desc">The creature's auto-attack. Set abilityType first; only fields for that type are used.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Core</div>
+    <div class="doc-var"><span class="doc-var-name">abilityType</span><span class="doc-var-type">AbilityType</span><span class="doc-var-desc">Attack shape: Projectile, Melee, AoE, Cone.</span></div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">float</span><span class="doc-var-desc">Base damage × PlayerStats.Damage = final hit.<span class="doc-range">5–20</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between attacks. Divided by AttackSpeed stat at runtime.<span class="doc-range">0.5–3.0</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">targetingRange</span><span class="doc-var-type">float</span><span class="doc-var-desc">Max target distance in units. Multiplied by Range stat.<span class="doc-range">3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">element</span><span class="doc-var-type">ElementType</span><span class="doc-var-desc">Elemental type for resistance/vulnerability calculations.</span></div>
+    <div class="doc-var"><span class="doc-var-name">requiresStationary</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Only fires when the player is not moving (below stationaryThreshold).</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Projectile Settings</div>
+    <div class="doc-var"><span class="doc-var-name">projectilePrefab</span><span class="doc-var-type">GameObject</span><span class="doc-var-desc">Prefab launched toward the target.</span></div>
+    <div class="doc-var"><span class="doc-var-name">projectileSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Travel speed in units/second.<span class="doc-range">8–20</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">projectileLifetime</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds before projectile self-destructs. Controls max range.<span class="doc-range">1–4</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Melee / AoE / Cone Settings</div>
+    <div class="doc-var"><span class="doc-var-name">meleeRange / meleeWidth</span><span class="doc-var-type">float</span><span class="doc-var-desc">Reach and width of the melee swing arc.<span class="doc-range">1–3 / 1–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">aoeRadius</span><span class="doc-var-type">float</span><span class="doc-var-desc">Radius of the AoE circle.<span class="doc-range">1.5–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">coneAngle / coneRange</span><span class="doc-var-type">float</span><span class="doc-var-desc">Angle (degrees) and length of the cone. 90° = quarter circle.<span class="doc-range">45–120 / 2–6</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-passivedata">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a2a2a;">🌿</div>
+    <div>
+      <div class="doc-card-title">PassiveAbilityData<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/Abilities/Passive/_Base/PassiveAbilityData.cs</div>
+      <div class="doc-card-desc">Defines a passive ability. Values per level live in the tiers list — main place to tune passive strength.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Identity</div>
+    <div class="doc-var"><span class="doc-var-name">abilityType</span><span class="doc-var-type">PassiveAbilityType</span><span class="doc-var-desc">Determines which ability class runs at runtime.</span></div>
+    <div class="doc-var"><span class="doc-var-name">rarity / maxLevel</span><span class="doc-var-type">enum / int</span><span class="doc-var-desc">Rarity tier and max stack count. maxLevel must match number of tiers entries.<span class="doc-range">1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tiers</span><span class="doc-var-type">List&lt;PassiveAbilityTier&gt;</span><span class="doc-var-desc">One entry per level, each a key-value dictionary of named floats (e.g. "damage": 12, "radius": 3). See each ability below for key names.</span></div>
+    <div class="doc-var"><span class="doc-var-name">mutuallyExclusiveWith</span><span class="doc-var-type">List&lt;PassiveAbilityData&gt;</span><span class="doc-var-desc">Abilities that cannot be equipped at the same time as this one.</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Audio</div>
+    <div class="doc-var"><span class="doc-var-name">activateSound / hitSound / spawnSound / loopSound</span><span class="doc-var-type">AudioClip</span><span class="doc-var-desc">Clips for activation, each hit, projectile spawn, and continuous loop respectively.</span></div>
+    <div class="doc-var"><span class="doc-var-name">volume</span><span class="doc-var-type">float</span><span class="doc-var-desc">Master volume for all sounds from this ability.<span class="doc-range">0.0–1.0</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-passivemanager">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a2a1a;">🗃️</div>
+    <div>
+      <div class="doc-card-title">PassiveAbilityManager</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/Abilities/Passive/_Base/PassiveAbilityManager.cs</div>
+      <div class="doc-card-desc">Manages passive slot counts, equipping/levelling passives, and the innate ability.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Slot Settings</div>
+    <div class="doc-var"><span class="doc-var-name">baseMaxSlots</span><span class="doc-var-type">int</span><span class="doc-var-desc">Default max passive slots for creatures that don't override via CreatureData.<span class="doc-range">2–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">evo3BonusSlots</span><span class="doc-var-type">int</span><span class="doc-var-desc">Extra global slots added at Evolution Stage 3.<span class="doc-range">0–2</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-specialdata">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2a1a2a;">⚡</div>
+    <div>
+      <div class="doc-card-title">SpecialAbilityData<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/Abilities/Special/_Base/SpecialAbilityData.cs</div>
+      <div class="doc-card-desc">Q-slot ability. Same tier structure as passive abilities. Only one equipped at a time.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Core</div>
+    <div class="doc-var"><span class="doc-var-name">abilityType</span><span class="doc-var-type">SpecialAbilityType</span><span class="doc-var-desc">Which ability class runs: Rolling, Permafrost, Revive.</span></div>
+    <div class="doc-var"><span class="doc-var-name">isPassive</span><span class="doc-var-type">bool</span><span class="doc-var-desc">If true, activates automatically — no Q press. Q button hidden in UI. Use for always-on specials like Revive.</span></div>
+    <div class="doc-var"><span class="doc-var-name">tiers</span><span class="doc-var-type">List&lt;PassiveAbilityTier&gt;</span><span class="doc-var-desc">Per-level stat dictionary — same structure as passive tiers. See each special ability below for key names.</span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-specialmanager">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2a1a35;">🎮</div>
+    <div>
+      <div class="doc-card-title">SpecialAbilityManager</div>
+      <div class="doc-card-path">Assets/Scripts/PLAYER/3_Upgrades/Abilities/Special/_Base/SpecialAbilityManager.cs</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Settings</div>
+    <div class="doc-var"><span class="doc-var-name">activateKey</span><span class="doc-var-type">KeyCode</span><span class="doc-var-desc">Key that triggers the special ability. Change here to rebind globally.<span class="doc-range">Default: Q</span></span></div>
+  </div>
+</div>
+
+<!-- ══════════ PASSIVE AoE ══════════ -->
+<div class="docs-section-heading" id="d-passive-aoe">
+  <div class="docs-section-icon" style="background:#2d1a10;">💥</div>
+  <div><h2>Passive Abilities — AoE</h2><p>Tune values in the Tiers list of each PassiveAbilityData asset</p></div>
+</div>
+<div class="doc-callout doc-callout-info" style="margin-bottom:16px"><span class="doc-callout-icon">ℹ️</span><span><strong>How to tune:</strong> Open the PassiveAbilityData asset → expand Tiers → pick the level entry → change the value next to the key listed below. Key names are case-sensitive.</span></div>
+
+<div class="doc-card" id="d-orb">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2d1a10;">🔥</div>
+    <div><div class="doc-card-title">Orb<span class="doc-so-badge" style="color:#fb923c;">AoE · Orb</span></div><div class="doc-card-desc">Orbiting projectiles that circle the player and damage enemies on contact. Runs an active → despawn → cooldown → respawn cycle.</div></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Number of orbs orbiting simultaneously. Added/removed live on level-up.<span class="doc-range">1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per hit, scaled by AbilityDamage stat.<span class="doc-range">8–30</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">radius</span><span class="doc-var-type">float</span><span class="doc-var-desc">Orbit distance from the player in units. Larger = wider ring, more coverage.<span class="doc-range">1.5–3.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">orbitSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Rotation speed in degrees/second.<span class="doc-range">80–200</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">orbSize</span><span class="doc-var-type">float</span><span class="doc-var-desc">Scale of each orb. Larger = bigger hitbox. Default 0.5.<span class="doc-range">0.3–1.0</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds orbs stay active before despawning.<span class="doc-range">3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between despawn and respawn.<span class="doc-range">0.5–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">hitCooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Per-enemy cooldown between hits from the same orb. Prevents shredding one enemy in a single pass. Default 0.5s.<span class="doc-range">0.3–1.0</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-firetrail">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2d1a10;">🔥</div>
+    <div><div class="doc-card-title">Fire Trail<span class="doc-so-badge" style="color:#fb923c;">AoE · FireTrail</span></div><div class="doc-card-desc">Leaves burning ground patches as the player moves. Patches tick damage. Multiple overlapping patches hit once per enemy per tick.</div></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per tick per enemy.<span class="doc-range">3–15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tickRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between damage ticks.<span class="doc-range">0.5–1.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">patchDuration</span><span class="doc-var-type">float</span><span class="doc-var-desc">How long each patch lasts before disappearing.<span class="doc-range">2–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">spawnDistance</span><span class="doc-var-type">float</span><span class="doc-var-desc">Units traveled before a new patch drops. Lower = denser trail.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">maxPatches</span><span class="doc-var-type">int</span><span class="doc-var-desc">Max simultaneous patches. Oldest removed when limit hit. 0 = no limit.<span class="doc-range">0 or 5–20</span></span></div>
+  </div>
+  <div class="doc-callout doc-callout-warn" style="margin-bottom:8px"><span class="doc-callout-icon">⚠️</span><span>Only spawns patches while the player moves faster than 0.5 units/s.</span></div>
+</div>
+
+<div class="doc-card" id="d-meteor">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2d1a10;">☄️</div>
+    <div><div class="doc-card-title">Meteor<span class="doc-so-badge" style="color:#fb923c;">AoE · Meteor</span></div><div class="doc-card-desc">Calls down meteor strikes in 10-second windows. Prefers targeting enemies, falls back to random positions.</div></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per enemy inside the explosion radius.<span class="doc-range">15–60</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">radius</span><span class="doc-var-type">float</span><span class="doc-var-desc">Explosion radius in units.<span class="doc-range">1.5–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Meteors that fall per 10-second window.<span class="doc-range">2–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">minDistance</span><span class="doc-var-type">float</span><span class="doc-var-desc">Minimum distance from the player a meteor can land.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">warningDuration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Warning indicator seconds before impact. 0 = instant no warning.<span class="doc-range">0–1.5</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-nova">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a1a2d;">💫</div>
+    <div><div class="doc-card-title">Nova<span class="doc-so-badge">AoE · Nova</span></div><div class="doc-card-desc">Expanding ring wave from the player that damages all enemies it crosses. Fires on cooldown.</div></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per enemy hit.<span class="doc-range">10–40</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">radius</span><span class="doc-var-type">float</span><span class="doc-var-desc">Maximum expansion radius.<span class="doc-range">3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between nova bursts.<span class="doc-range">2–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">expansionSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Ring expansion speed in units/second. Slower = more readable.<span class="doc-range">4–12</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">knockbackForce</span><span class="doc-var-type">float</span><span class="doc-var-desc">Outward force per hit enemy. 0 = no knockback.<span class="doc-range">0–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">lineWidth</span><span class="doc-var-type">float</span><span class="doc-var-desc">VFX ring thickness in units. Does not affect hitbox. Default 0.15.<span class="doc-range">0.1–0.4</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-snowball">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a2535;">❄️</div>
+    <div><div class="doc-card-title">Snowball<span class="doc-so-badge" style="color:#22d3ee;">AoE · Snowball</span></div><div class="doc-card-desc">Spawns spiraling projectiles that grow in size and damage with each enemy hit. Size and damage cap at configurable limits.</div></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">baseDamage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Starting damage before any growth.<span class="doc-range">5–20</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">baseSize</span><span class="doc-var-type">float</span><span class="doc-var-desc">Starting scale when first spawned.<span class="doc-range">0.3–0.8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Snowballs per cycle, evenly spaced angularly.<span class="doc-range">1–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">spiralSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Rotation speed in degrees/second as it spirals outward.<span class="doc-range">60–180</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">expansionRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Orbit radius growth speed in units/second.<span class="doc-range">1–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds each snowball survives.<span class="doc-range">2–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between spawn cycles.<span class="doc-range">0.5–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">damageGrowth</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage added per enemy hit (up to maxDamage).<span class="doc-range">2–10</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">sizeGrowth</span><span class="doc-var-type">float</span><span class="doc-var-desc">Scale added per enemy hit (up to maxSize).<span class="doc-range">0.05–0.2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">maxDamage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage cap.<span class="doc-range">30–100</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">maxSize</span><span class="doc-var-type">float</span><span class="doc-var-desc">Size cap.<span class="doc-range">1.0–3.0</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-damagearea">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2d2010;">🟡</div>
+    <div><div class="doc-card-title">Damage Area<span class="doc-so-badge" style="color:#facc15;">AoE · DamageArea</span></div><div class="doc-card-desc">Spawns a batch of circular damage zones near the player on cooldown. First zone targets nearest enemy. Zones cannot overlap more than 40%.</div></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per tick. Multiple overlapping zones still only hit each enemy once per tick.<span class="doc-range">5–25</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">range</span><span class="doc-var-type">float</span><span class="doc-var-desc">Max spawn distance from the player.<span class="doc-range">3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">areaSize</span><span class="doc-var-type">float</span><span class="doc-var-desc">Radius of each zone in units.<span class="doc-range">1–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tickRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between damage ticks while zones are active.<span class="doc-range">0.5–1.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between batches.<span class="doc-range">1–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Zones per batch.<span class="doc-range">1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">How long each batch persists.<span class="doc-range">2–5</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-aura">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#1a2a1a;">🌀</div>
+    <div><div class="doc-card-title">Aura<span class="doc-so-badge" style="color:#4ade80;">AoE · Aura</span></div><div class="doc-card-desc">Persistent zone centred on the player that slows and/or damages all enemies inside. Can cycle active/cooldown or remain always-on.</div></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per tick. 0 = pure slow aura with no damage.<span class="doc-range">0–15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">radius</span><span class="doc-var-type">float</span><span class="doc-var-desc">Aura radius. Follows the player.<span class="doc-range">2–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tickRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between damage ticks.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Active phase length. 0 = always active.<span class="doc-range">0 or 3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Inactive phase length. 0 = always active.<span class="doc-range">0 or 2–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">slowAmount</span><span class="doc-var-type">float</span><span class="doc-var-desc">Speed multiplier for enemies inside. 1.0 = no slow, 0.5 = 50% speed, 0.0 = stopped. Stacks with other slows.<span class="doc-range">0.3–0.7</span></span></div>
+  </div>
+</div>
+
+<!-- ══════════ PASSIVE PROJECTILE ══════════ -->
+<div class="docs-section-heading" id="d-passive-proj">
+  <div class="docs-section-icon" style="background:#1a2535;">🚀</div>
+  <div><h2>Passive Abilities — Projectile</h2><p>Homing, bouncing, and sustained projectile attacks</p></div>
+</div>
+
+<div class="doc-card" id="d-missile">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2d1a10;">🚀</div><div><div class="doc-card-title">Missile<span class="doc-so-badge" style="color:#fb923c;">Projectile · Missile</span></div><div class="doc-card-desc">Homing missile fired at nearest enemy. Explodes on impact with AoE blast.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between shots.<span class="doc-range">1.5–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">projectileSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Travel speed. Steers toward target — high speed = less steering arc.<span class="doc-range">6–16</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">explosionDamage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per enemy inside the blast. Scaled by AbilityDamage.<span class="doc-range">15–60</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">explosionRadius</span><span class="doc-var-type">float</span><span class="doc-var-desc">Blast radius in units.<span class="doc-range">1.5–4</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-piercing">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a1f35;">🏹</div><div><div class="doc-card-title">Piercing<span class="doc-so-badge">Projectile · Piercing</span></div><div class="doc-card-desc">Burst-fires projectiles in rapid succession, each targeting a different enemy, passing through multiple targets.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per hit.<span class="doc-range">8–30</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between full bursts (after last shot in burst).<span class="doc-range">2–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Projectiles per burst. Each prefers a unique target.<span class="doc-range">2–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">successionRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between shots in a burst.<span class="doc-range">0.05–0.2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">piercingAmount</span><span class="doc-var-type">int</span><span class="doc-var-desc">Enemies each projectile passes through. 1 = hits one and stops, 3 = hits two extras after the first.<span class="doc-range">1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">range</span><span class="doc-var-type">float</span><span class="doc-var-desc">Max travel distance. Enemies beyond this are ignored for targeting.<span class="doc-range">5–12</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">projectileSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Travel speed in units/second.<span class="doc-range">8–18</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-boulder">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2a201a;">🪨</div><div><div class="doc-card-title">Boulder<span class="doc-so-badge" style="color:#d97706;">Projectile · Boulder</span></div><div class="doc-card-desc">Boulders that bounce off camera edges, damaging enemies they roll through. Always active — no cooldown.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per collision.<span class="doc-range">10–40</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">speed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Boulder travel speed. Higher = more chaotic, harder to dodge.<span class="doc-range">4–10</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">size</span><span class="doc-var-type">float</span><span class="doc-var-desc">Scale of sprite and hitbox.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Active boulders simultaneously. New ones added on level-up without resetting existing ones.<span class="doc-range">1–4</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-brick">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2a201a;">🧱</div><div><div class="doc-card-title">Brick<span class="doc-so-badge" style="color:#d97706;">Projectile · Brick</span></div><div class="doc-card-desc">Throws bricks upward in parabolic arcs. They travel off-screen and fall back down, dealing AoE damage at their landing point.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">AoE damage at the landing point.<span class="doc-range">10–50</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">size</span><span class="doc-var-type">float</span><span class="doc-var-desc">Brick scale and landing zone radius.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Bricks per burst.<span class="doc-range">1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">speed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Launch speed — controls arc height and horizontal reach.<span class="doc-range">6–14</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between bursts.<span class="doc-range">2–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">successionRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between bricks in a burst. Default 0.15s.<span class="doc-range">0.1–0.3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">horizontalSpread</span><span class="doc-var-type">float</span><span class="doc-var-desc">Max random horizontal offset at landing. Default 3.<span class="doc-range">1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">gravity</span><span class="doc-var-type">float</span><span class="doc-var-desc">Arc gravity constant. Higher = shorter faster arcs. Default 18.<span class="doc-range">12–25</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-spray">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2d1a10;">🌬️</div><div><div class="doc-card-title">Spray<span class="doc-so-badge" style="color:#fb923c;">Projectile · Spray</span></div><div class="doc-card-desc">Sustained cone attack (flamethrower-style) in the player's movement direction. Direction locks at burst start. Supports front, back, or dual-direction modes.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per tick per enemy in the cone.<span class="doc-range">3–15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tickRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between damage ticks within a burst.<span class="doc-range">0.1–0.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">How long each spray burst lasts.<span class="doc-range">1–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between bursts.<span class="doc-range">1–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">coneAngle</span><span class="doc-var-type">float</span><span class="doc-var-desc">Full angular width in degrees. 60 = narrow stream, 120 = wide fan.<span class="doc-range">40–120</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">coneRange</span><span class="doc-var-type">float</span><span class="doc-var-desc">Cone length in units.<span class="doc-range">3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">sprayMode</span><span class="doc-var-type">int</span><span class="doc-var-desc">0 = front only, 1 = back only, 2 = front and back simultaneously.<span class="doc-range">0, 1, 2</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-ray">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a1a2d;">⚡</div><div><div class="doc-card-title">Ray<span class="doc-so-badge">Projectile · Ray</span></div><div class="doc-card-desc">Sustained rectangular beam aimed at nearest enemy. Direction locks at burst start. Ticks damage to all enemies in the beam rectangle.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per tick per enemy inside the beam.<span class="doc-range">5–20</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tickRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between damage ticks.<span class="doc-range">0.1–0.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">How long each burst lasts.<span class="doc-range">1–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between bursts.<span class="doc-range">1–4</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">width</span><span class="doc-var-type">float</span><span class="doc-var-desc">Beam width in units. Wider = more enemies hit side-by-side.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">range</span><span class="doc-var-type">float</span><span class="doc-var-desc">Beam length from the player.<span class="doc-range">4–10</span></span></div>
+  </div>
+</div>
+
+<!-- ══════════ PASSIVE BUFF ══════════ -->
+<div class="docs-section-heading" id="d-passive-buff">
+  <div class="docs-section-icon" style="background:#1a2a1a;">✨</div>
+  <div><h2>Passive Abilities — Buff</h2><p>Modifiers to attacks, movement, or stats — no direct damage source</p></div>
+</div>
+
+<div class="doc-card" id="d-multishot">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a2535;">🏹</div><div><div class="doc-card-title">Multishot<span class="doc-so-badge" style="color:#22d3ee;">Buff · Multishot</span></div><div class="doc-card-desc">Makes every auto-attack fire multiple projectiles in a spread fan. Only works when the base ability type is Projectile.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">projectileCount</span><span class="doc-var-type">int</span><span class="doc-var-desc">Total projectiles per auto-attack shot.<span class="doc-range">2–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">spreadAngle</span><span class="doc-var-type">float</span><span class="doc-var-desc">Total fan spread in degrees, evenly distributed. 3 shots 40° → -20°, 0°, +20°.<span class="doc-range">20–60</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-movingattack">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a2a1a;">🏃</div><div><div class="doc-card-title">Moving Attack<span class="doc-so-badge" style="color:#4ade80;">Buff · MovingAttack</span></div><div class="doc-card-desc">Unlocks the ability to fire the auto-attack while moving. Creatures with requiresStationary=true need this passive to shoot while running.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">attackSpeedBonus</span><span class="doc-var-type">float</span><span class="doc-var-desc">Optional bonus attack speed while moving. 0 = just the movement unlock, no speed bonus.<span class="doc-range">0–0.3</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-burst">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2d1a10;">💥</div><div><div class="doc-card-title">Burst<span class="doc-so-badge" style="color:#fb923c;">Buff · Burst</span></div><div class="doc-card-desc">Fires extra shots each time the base auto-attack fires, using the same ability. Piggybacks on every base attack event.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">count</span><span class="doc-var-type">int</span><span class="doc-var-desc">Extra shots after each base attack.<span class="doc-range">1–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">successionRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between extra shots.<span class="doc-range">0.05–0.2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">alternate</span><span class="doc-var-type">int</span><span class="doc-var-desc">0 = all extra shots fire in the same direction. 1 = every other extra shot fires opposite direction.<span class="doc-range">0 or 1</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-flameheart">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2d1a1a;">❤️‍🔥</div><div><div class="doc-card-title">Flame Heart<span class="doc-so-badge" style="color:#f87171;">Buff · FlameHeart</span></div><div class="doc-card-desc">Activates emergency healing when HP drops below a threshold. Can be restricted to only heal while standing still, only while moving, or always.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">threshold</span><span class="doc-var-type">float</span><span class="doc-var-desc">HP fraction to trigger. 0.3 = activates below 30% HP.<span class="doc-range">0.25–0.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">healAmount</span><span class="doc-var-type">int</span><span class="doc-var-desc">HP restored per tick.<span class="doc-range">2–10</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tickRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds between heal ticks.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">healMode</span><span class="doc-var-type">int</span><span class="doc-var-desc">0 = stationary only, 1 = moving only, 2 = always. Mode 0 creates high-risk tension; mode 1 rewards kiting.<span class="doc-range">0, 1, 2</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-thresholdbuff">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2d2010;">⚡</div><div><div class="doc-card-title">Threshold Buff<span class="doc-so-badge" style="color:#facc15;">Buff · ThresholdBuff</span></div><div class="doc-card-desc">Grants a percentage stat bonus when HP drops below a threshold. Removed instantly when HP recovers above it.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">statType</span><span class="doc-var-type">int</span><span class="doc-var-desc">StatType enum value (0=Damage, 1=AbilityDamage, 2=AttackSpeed, 3=CritChance, 4=CritDamage … see Stat Types below).<span class="doc-range">0–15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">threshold</span><span class="doc-var-type">float</span><span class="doc-var-desc">HP fraction to trigger. 0.5 = activates below 50% HP.<span class="doc-range">0.3–0.6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">bonus</span><span class="doc-var-type">float</span><span class="doc-var-desc">Percent bonus applied. 0.2 = +20% to that stat.<span class="doc-range">0.15–0.5</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-standingbuff">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a2a1a;">🧘</div><div><div class="doc-card-title">Standing Buff<span class="doc-so-badge" style="color:#4ade80;">Buff · StandingBuff</span></div><div class="doc-card-desc">Grants a percentage stat bonus while the player stands still. Bonus removed immediately upon any movement.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">statType</span><span class="doc-var-type">int</span><span class="doc-var-desc">StatType enum value (same numbering as Threshold Buff).<span class="doc-range">0–15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">delay</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds completely still before buff activates.<span class="doc-range">0.3–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">bonus</span><span class="doc-var-type">float</span><span class="doc-var-desc">Percent bonus. 0.2 = +20%.<span class="doc-range">0.15–0.5</span></span></div>
+  </div>
+</div>
+
+<!-- ══════════ SPECIAL ══════════ -->
+<div class="docs-section-heading" id="d-special">
+  <div class="docs-section-icon" style="background:#2a1a35;">⚡</div>
+  <div><h2>Special Abilities (Q Slot)</h2><p>Ready → Active → Cooldown cycle. duration = active phase length, cooldown = recharge wait.</p></div>
+</div>
+
+<div class="doc-card" id="d-rolling">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a2535;">⚽</div><div><div class="doc-card-title">Rolling<span class="doc-so-badge" style="color:#22d3ee;">Special · Rolling</span></div><div class="doc-card-desc">Player becomes an invulnerable rolling ball. Momentum-based movement. Damages enemies on contact. Normal movement and combat disabled during roll.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">damage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage per enemy contact, scaled by AbilityDamage.<span class="doc-range">15–50</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">maxSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Top rolling speed in units/second.<span class="doc-range">6–14</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">ballSize</span><span class="doc-var-type">float</span><span class="doc-var-desc">Scale of ball form. Larger = bigger hitbox.<span class="doc-range">0.8–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">acceleration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Speed change rate in units/s². High = responsive, low = satisfying momentum feel.<span class="doc-range">8–20</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">turnRate</span><span class="doc-var-type">float</span><span class="doc-var-desc">Direction change speed in degrees/second. Lower = harder to steer.<span class="doc-range">80–200</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Max seconds in ball form before returning to normal.<span class="doc-range">2–6</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds before the ability is ready again.<span class="doc-range">4–12</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">knockback</span><span class="doc-var-type">float</span><span class="doc-var-desc">Force applied to enemies on contact. 0 = no knockback.<span class="doc-range">0–8</span></span></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-permafrost">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a2535;">🧊</div><div><div class="doc-card-title">Permafrost<span class="doc-so-badge" style="color:#22d3ee;">Special · Permafrost</span></div><div class="doc-card-desc">Drops a stationary frost zone at the player's position. Player moves freely while zone persists. Slows and potentially deep-freezes enemies inside. Freeze requires SlowStack passive to be equipped.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">cooldown</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds before the ability can be activated again.<span class="doc-range">6–15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">duration</span><span class="doc-var-type">float</span><span class="doc-var-desc">How long the frost zone persists on the ground.<span class="doc-range">3–8</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">radius</span><span class="doc-var-type">float</span><span class="doc-var-desc">Frost zone radius in units.<span class="doc-range">3–7</span></span></div>
+  </div>
+  <div class="doc-callout doc-callout-info" style="margin-bottom:8px"><span class="doc-callout-icon">ℹ️</span><span>Slow strength and freeze chance are controlled by the Slow and SlowStack passive values — not Permafrost tiers. Permafrost only controls zone size, duration, and cooldown.</span></div>
+</div>
+
+<div class="doc-card" id="d-revive">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#2d1a1a;">💀</div><div><div class="doc-card-title">Revive<span class="doc-so-badge" style="color:#f87171;">Special · Revive</span></div><div class="doc-card-desc">Always-on passive special (isPassive=true). Intercepts the death event and auto-revives the player. No Q interaction — triggers on death.</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">Tier Keys</div>
+    <div class="doc-var"><span class="doc-var-name">charges</span><span class="doc-var-type">int</span><span class="doc-var-desc">Times the player can be revived per run. When exhausted, next death is final.<span class="doc-range">1–3</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">healPercent</span><span class="doc-var-type">float</span><span class="doc-var-desc">Fraction of max HP restored on revival. 0.25 = revived at 25% HP.<span class="doc-range">0.2–0.5</span></span></div>
+  </div>
+  <div class="doc-callout doc-callout-warn" style="margin-bottom:8px"><span class="doc-callout-icon">⚠️</span><span>Must have <strong>isPassive = true</strong> on its SpecialAbilityData or it will appear as a Q-press ability and not trigger on death.</span></div>
+</div>
+
+<!-- ══════════ ENEMY ══════════ -->
+<div class="docs-section-heading" id="d-enemy">
+  <div class="docs-section-icon" style="background:#2d1a1a;">👾</div>
+  <div><h2>Enemy Systems</h2><p>Enemy data assets and runtime component</p></div>
+</div>
+
+<div class="doc-card" id="d-enemydata">
+  <div class="doc-card-header">
+    <div class="doc-card-icon" style="background:#2d1a1a;">📄</div>
+    <div>
+      <div class="doc-card-title">EnemyData<span class="doc-so-badge">ScriptableObject</span></div>
+      <div class="doc-card-path">Assets/Scripts/ENEMY/EnemyData.cs</div>
+      <div class="doc-card-desc">Master data asset for an enemy. Controls all stats, AI behaviour, attacks, status effects, and death behaviour.</div>
+    </div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Base Stats</div>
+    <div class="doc-var"><span class="doc-var-name">maxHealth</span><span class="doc-var-type">int</span><span class="doc-var-desc">Total HP.<span class="doc-range">20–500</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">moveSpeed</span><span class="doc-var-type">float</span><span class="doc-var-desc">Base movement speed. Can be reduced by slow effects at runtime.<span class="doc-range">1.5–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">contactDamage</span><span class="doc-var-type">int</span><span class="doc-var-desc">Damage when physically overlapping the player's collider.<span class="doc-range">5–30</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">appliesKnockback</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Whether contact also knocks the player back.</span></div>
+    <div class="doc-var"><span class="doc-var-name">knockbackForce</span><span class="doc-var-type">float</span><span class="doc-var-desc">Contact knockback velocity.<span class="doc-range">3–10</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">knockbackDuration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds of player input suppression after knockback.<span class="doc-range">0.1–0.5</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Movement AI</div>
+    <div class="doc-var"><span class="doc-var-name">movementType</span><span class="doc-var-type">MovementType</span><span class="doc-var-desc">Core AI pattern. Only sub-fields for the chosen type are used (see Enums reference).</span></div>
+    <div class="doc-var"><span class="doc-var-name">chargeRange / chargeWindupTime / chargeSpeed / chargeMaxDuration</span><span class="doc-var-type">float</span><span class="doc-var-desc">[Charge] Distance to begin windup, pause before launch, speed multiplier during charge, max charge duration.<span class="doc-range">4–10 / 0.3–1.5 / 1.5–4 / 0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">erraticTargetRadius / erraticRepickInterval</span><span class="doc-var-type">float</span><span class="doc-var-desc">[Erratic] Random target radius around player, seconds between repicking direction.<span class="doc-range">1–5 / 0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">tacticalMinRange / tacticalMaxRange</span><span class="doc-var-type">float</span><span class="doc-var-desc">[Tactical] Preferred distance band. Flees if closer than min, approaches if farther than max.<span class="doc-range">3–6 / 5–10</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">fleeDetectionRange / fleeSafeDistance / wanderRadius / wanderRepickInterval</span><span class="doc-var-type">float</span><span class="doc-var-desc">[Flee] Detect range, safe distance to stop fleeing, wander area, and repick timing.<span class="doc-range">5–10 / 8–15 / 3–8 / 1–4</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Attack</div>
+    <div class="doc-var"><span class="doc-var-name">attackType</span><span class="doc-var-type">AttackType</span><span class="doc-var-desc">Ranged/special attack pattern. None = contact damage only.</span></div>
+    <div class="doc-var"><span class="doc-var-name">attackDamage / attackRange / attackCooldown</span><span class="doc-var-type">int / float / float</span><span class="doc-var-desc">Damage, targeting range, and seconds between attacks.<span class="doc-range">5–40 / 3–10 / 1–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">projectilePrefab / projectileSpeed</span><span class="doc-var-type">GameObject / float</span><span class="doc-var-desc">[Projectile/Burst] Prefab and travel speed.<span class="doc-range">5–15</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">projectileCount / spreadAngle</span><span class="doc-var-type">int / float</span><span class="doc-var-desc">[Burst] Projectiles in the fan and total fan angle in degrees.<span class="doc-range">3–12 / 30–360</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">telegraphDuration</span><span class="doc-var-type">float</span><span class="doc-var-desc">[Telegraphed] Seconds danger zone is shown before damage fires.<span class="doc-range">0.5–2</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">aoeRadius / aoeDangerZonePrefab</span><span class="doc-var-type">float / GameObject</span><span class="doc-var-desc">[AoE] Damage radius and danger indicator prefab.<span class="doc-range">1.5–5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">enemySpawnData / summonCount / summonCooldown / summonDuration</span><span class="doc-var-type">EnemyData / int / float / float</span><span class="doc-var-desc">[Summon] Data for spawned enemies, quantity per event, seconds between events, and lifetime (0 = until killed).<span class="doc-range">1–5 / 5–20 / 0 or 10–60</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Status Effects</div>
+    <div class="doc-var"><span class="doc-var-name">appliesPoison</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Whether contact/attack applies a poison DoT to the player.</span></div>
+    <div class="doc-var"><span class="doc-var-name">poisonDamagePerTick / poisonDuration / poisonTickInterval</span><span class="doc-var-type">int / float / float</span><span class="doc-var-desc">Tick damage, total poison duration, and seconds between ticks.<span class="doc-range">1–10 / 2–8 / 0.5–1.0</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Death Behaviour</div>
+    <div class="doc-var"><span class="doc-var-name">explodesOnDeath</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Deals area damage around the enemy on death.</span></div>
+    <div class="doc-var"><span class="doc-var-name">deathExplosionRadius / deathExplosionDamage</span><span class="doc-var-type">float / int</span><span class="doc-var-desc">Explosion radius and damage.<span class="doc-range">1.5–4 / 5–30</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">splitsOnDeath</span><span class="doc-var-type">bool</span><span class="doc-var-desc">Spawns smaller enemies on death.</span></div>
+    <div class="doc-var"><span class="doc-var-name">splitIntoData / splitCount</span><span class="doc-var-type">EnemyData / int</span><span class="doc-var-desc">Data for child enemies and how many spawn.<span class="doc-range">2–4</span></span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Elemental Modifiers</div>
+    <div class="doc-var"><span class="doc-var-name">vulnerabilities</span><span class="doc-var-type">List&lt;ElementModifier&gt;</span><span class="doc-var-desc">Elements this enemy takes bonus damage from. Multiplier &gt;1 = more damage.</span></div>
+    <div class="doc-var"><span class="doc-var-name">resistances</span><span class="doc-var-type">List&lt;ElementModifier&gt;</span><span class="doc-var-desc">Elements this enemy takes less damage from. Multiplier &lt;1 = less damage.</span></div>
+  </div>
+  <div class="doc-var-group">
+    <div class="doc-group-title">Death Visuals</div>
+    <div class="doc-var"><span class="doc-var-name">deathAnimationDuration</span><span class="doc-var-type">float</span><span class="doc-var-desc">Seconds to wait for death animation before destroying the GameObject.<span class="doc-range">0.3–1.5</span></span></div>
+    <div class="doc-var"><span class="doc-var-name">deathVFXPrefab</span><span class="doc-var-type">GameObject</span><span class="doc-var-desc">VFX spawned at enemy position on death.</span></div>
+    <div class="doc-var"><span class="doc-var-name">lootTable</span><span class="doc-var-type">LootTable</span><span class="doc-var-desc">Defines XP orbs and item drops on death.</span></div>
+  </div>
+</div>
+
+<!-- ══════════ REFERENCE ══════════ -->
+<div class="docs-section-heading" id="d-reference">
+  <div class="docs-section-icon" style="background:#1a2025;">📚</div>
+  <div><h2>Quick Reference</h2><p>All stat types and enums in one place</p></div>
+</div>
+
+<div class="doc-card" id="d-stattypes">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1a2025;">📊</div><div><div class="doc-card-title">All Stat Types</div><div class="doc-card-desc">Every stat modifiable by upgrades. Use these names in UpgradeData.statToModify. Int values used in Threshold/Standing Buff tier keys.</div></div></div>
+  <div class="doc-stat-grid">
+    <div class="doc-stat-item"><div class="doc-stat-name">0 · Damage</div><div class="doc-stat-desc">Auto-attack damage multiplier.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">1 · AbilityDamage</div><div class="doc-stat-desc">Passive + special ability multiplier.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">2 · AttackSpeed</div><div class="doc-stat-desc">Divides auto-attack cooldown. Higher = faster.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">3 · CritChance</div><div class="doc-stat-desc">Probability (0–1) to land a crit.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">4 · CritDamage</div><div class="doc-stat-desc">Multiplier on crit hits. 1.5 = +50%.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">5 · Range</div><div class="doc-stat-desc">Multiplier on all targeting ranges.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">6 · Knockback</div><div class="doc-stat-desc">Multiplier on knockback force applied to enemies.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">7 · Lifesteal</div><div class="doc-stat-desc">Fraction of damage dealt restored as HP.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">8 · MaxHealth</div><div class="doc-stat-desc">Maximum HP. Raising does NOT restore HP.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">9 · Regeneration</div><div class="doc-stat-desc">HP healed per regen tick.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">10 · Armor</div><div class="doc-stat-desc">Flat damage subtracted from each incoming hit.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">11 · Dodge</div><div class="doc-stat-desc">Probability (0–1) to fully evade a hit.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">12 · MoveSpeed</div><div class="doc-stat-desc">Movement speed in units/second.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">13 · PickupRange</div><div class="doc-stat-desc">XP orb auto-collection radius.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">14 · Luck</div><div class="doc-stat-desc">Shifts upgrade rarity toward higher tiers.</div></div>
+    <div class="doc-stat-item"><div class="doc-stat-name">15 · XPGain</div><div class="doc-stat-desc">Multiplier on all XP received.</div></div>
+  </div>
+</div>
+
+<div class="doc-card" id="d-enums">
+  <div class="doc-card-header"><div class="doc-card-icon" style="background:#1f1a2a;">🔢</div><div><div class="doc-card-title">Key Enums</div></div></div>
+  <div class="doc-var-group"><div class="doc-group-title">AbilityType — base attack pattern</div></div>
+  <div class="doc-enum-grid">
+    <div class="doc-enum-item"><div class="doc-enum-name">Projectile</div><div class="doc-enum-desc">Fires a prefab toward target</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Melee</div><div class="doc-enum-desc">Short-range directional swing</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">AoE</div><div class="doc-enum-desc">Circle centred on player or target</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Cone</div><div class="doc-enum-desc">Angular arc in aim direction</div></div>
+  </div>
+  <div class="doc-var-group"><div class="doc-group-title">AttackType — enemy ranged attack</div></div>
+  <div class="doc-enum-grid">
+    <div class="doc-enum-item"><div class="doc-enum-name">None</div><div class="doc-enum-desc">Contact only</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Projectile</div><div class="doc-enum-desc">Single aimed projectile</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">BurstProjectile</div><div class="doc-enum-desc">Fan of multiple projectiles</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Telegraphed</div><div class="doc-enum-desc">Danger zone shown before hit</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">AoE</div><div class="doc-enum-desc">Instant area damage</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Summon</div><div class="doc-enum-desc">Spawns child enemies</div></div>
+  </div>
+  <div class="doc-var-group"><div class="doc-group-title">MovementType — enemy AI</div></div>
+  <div class="doc-enum-grid">
+    <div class="doc-enum-item"><div class="doc-enum-name">ChasePlayer</div><div class="doc-enum-desc">Direct pursuit at all times</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Erratic</div><div class="doc-enum-desc">Random drift toward player</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Flee</div><div class="doc-enum-desc">Runs away from player</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Charge</div><div class="doc-enum-desc">Windup then burst dash</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Tactical</div><div class="doc-enum-desc">Keeps preferred distance band</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Pattern</div><div class="doc-enum-desc">Pre-defined waypoints</div></div>
+    <div class="doc-enum-item"><div class="doc-enum-name">Stationary</div><div class="doc-enum-desc">Does not move — turret style</div></div>
+  </div>
+</div>
+
+</div><!-- /docs-main -->
+</div><!-- /docs-layout -->
+</div><!-- /docs-wrap -->
+</template>
 </body>
 </html>
